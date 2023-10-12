@@ -5,16 +5,16 @@ import React, { useState } from 'react'
 
 const TestimonialsContent = [
     {
-        Name: 'Ankur Wariko',
+        Name: 'Mayank Shergill',
         CompanyName: 'NEARBUY.COM',
         Review: 'I am so impressed with the details and the planning that it felt like we have been working together for such a long time. Would strongly recommend them if you want anything to do with video.',
         media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/wvxYQwPdZ5E?si=Lu5MGcXNcmfeANs3" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
     },
     {
-        Name: 'Ankur Qureshi',
+        Name: 'Vanya',
         CompanyName: 'NEARBUY.COM',
         Review: 'I am so impressed with the details and the planning that it felt like we have been working together for such a long time. Would strongly recommend them if you want anything to do with video.',
-        media: <iframe className='object-cover w-full h-full rounded-lg' src="https://youtube.com/shorts/8XIJnoUGvSw?si=5XKZNpZBUKNwR3r7" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/Mn6NRhWTViw?si=F6UrWm4i3Rm5VKF_" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
     },
     {
         Name: 'Dr. Pushpendra Tiwari',

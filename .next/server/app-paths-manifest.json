@@ -1,0 +1,8 @@
+{
+  "/(root)/page": "app/(root)/page.js",
+  "/(root)/blog/page": "app/(root)/blog/page.js",
+  "/(root)/contact/page": "app/(root)/contact/page.js",
+  "/(landingpage)/service/socialmediamarketing/page": "app/(landingpage)/service/socialmediamarketing/page.js",
+  "/(root)/services/page": "app/(root)/services/page.js",
+  "/(root)/blog/[slug]/page": "app/(root)/blog/[slug]/page.js"
+}
