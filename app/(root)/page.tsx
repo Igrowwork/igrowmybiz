@@ -5,6 +5,7 @@ import HomeService from './components/home-service'
 import Image from 'next/image'
 import Testimonials from './components/testimonial'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
+import Slider from './components/slider'
 
 
 const images = ['abcap-a3be2e4f.png', 'bbb-016bebb4.png', 'geoline-221c69ce.png', 'magha-6b5980fd.png', 'more-09e1cd70.png', 'quikdsp-5b6fab73.png', 'rapido-710258dc.png', 'shim-1e9caefd.png', '12 Nov Logo new 01.png', 'Bluejay.png', 'day events logo.png', 'logo (1).png', 'Logo Design.png', 'output-onlinepngtools (2).png', 'vishal lo for whit vid.png', 'abcap-a3be2e4f.png', 'bbb-016bebb4.png', 'geoline-221c69ce.png', 'magha-6b5980fd.png', 'more-09e1cd70.png', 'quikdsp-5b6fab73.png', 'rapido-710258dc.png', 'shim-1e9caefd.png', '12 Nov Logo new 01.png', 'Bluejay.png', 'day events logo.png', 'logo (1).png', 'Logo Design.png', 'output-onlinepngtools (2).png', 'vishal lo for whit vid.png',]
@@ -13,8 +14,8 @@ export default function Home() {
     <>
       <main className='bg-secondaryColor w-full'>
 
-        <section className='flex h-screen w-full md:px-[5%] lg:px-[7%]'>
-          <div className='md:w-1/2 h-full flex flex-col gap-5 justify-center px-20 md:px-10 lg:px-14'>
+        <section className='flex h-screen w-full md:px-[5%] lg:px-[7%] relative'>
+          <div className='md:w-1/2 h-full flex flex-col gap-5 justify-center px-20 md:px-10 lg:px-14 relative z-30'>
             <h2 className={cn(oxygen.className, 'text-white text-2xl md:text-xl lg:text-[32px] font-bold leading-8 lg:leading-[2.7rem]')}>
               IgrowMyBiz - <span className='text-textColor'>the one stop solution for you business needs</span>
             </h2>
@@ -22,8 +23,11 @@ export default function Home() {
               Our Services
             </Link>
           </div>
-          <div className='w-1/2 hidden md:block'>
-            <div className='bg-gray-400 h-full w-full relative'><Image src={'/assets/images/IGMB Home page.png'} alt='home' fill className='object-cover'/></div>
+          <div className='w-full h-full absolute z-20 bg-black md:hidden opacity-70'/>
+          <div className='w-full md:w-[40%] h-full absolute top-0 left-0 md:left-[95%] z-10 md:-translate-x-full '>
+            <div className='bg-gray-400 h-full w-full relative'>
+              <Slider/>
+            </div>
           </div>
         </section>
         <section className='bg-black'>
