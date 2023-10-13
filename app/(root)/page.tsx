@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           <div className='w-full h-full absolute z-20 bg-black md:hidden opacity-70'/>
           <div className='w-full md:w-[40%] h-full absolute top-0 left-0 md:left-[95%] z-10 md:-translate-x-full '>
-            <div className='bg-gray-400 h-full w-full relative'>
+            <div className='bg-gray-400 h-full w-full relative rounded-md'>
               <Slider/>
             </div>
           </div>
