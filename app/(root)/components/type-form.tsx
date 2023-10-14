@@ -2,8 +2,10 @@
 import { Button } from '@/components/ui/button';
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem } from '@/components/ui/command';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { useToast } from '@/components/ui/use-toast';
 import { cn } from '@/lib/utils';
-import { Check, ChevronDown, ChevronUp } from 'lucide-react';
+import axios from 'axios';
+import { Check, ChevronDown, ChevronUp, Loader2 } from 'lucide-react';
 import React, { useState } from 'react';
 
 const options = [
@@ -60,6 +62,9 @@ export default function TypeFormComponent() {
   const [website, setwebsite] = useState<string>('');
   const [phoneNumber, setphoneNumber] = useState<string>('');
   const [selectedOptions, setselectedOptions] = useState<string[]>([]);
+  const [Submited, setSubmited] = useState<boolean>(false)
+  const [fetching, setFetching] = useState<boolean>(false)
+  const { toast } = useToast()
 
 
   const handleOptionToggle = (value: string) => {
@@ -71,18 +76,43 @@ export default function TypeFormComponent() {
       setselectedOptions((prev) => [...prev, value]);
     }
   };
-  const handleSubmit:any = () => {
+  const handleSubmit: any = async () => {
     const phone = value.concat(phoneNumber)
-    console.log({ name: fullName, options: selectedOptions, email: emailAddress, company: compnayName, website: website, phone: phone })
+    const values = { name: fullName, options: selectedOptions, email: emailAddress, company: compnayName, website: website, phone: phone }
+    try {
+      setFetching(true);
+      const response = await axios.post('/api/typeform', values)
+      setFetching(false)
+      setSubmited(true)
+      toast({
+        title: "Successfull 👍👍",
+        description: response.data,
+      })
+    } catch (error) {
+      setFetching(false);
+      toast({
+        title: "Oops 😔😔",
+        description: 'Something went wrong',
+        variant: "destructive"
+      })
+    }
   }
+  const isValidEmail = (email: string) => {
+    const emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    return emailRegex.test(email);
+  };
+  const isValidPhoneNumber = (phoneNumber: string) => {
+    const phoneRegex = /^\d+$/;
+    return phoneRegex.test(phoneNumber);
+  };
 
   return (
-    <form onSubmit={handleSubmit} className='bg-secondaryBGColor overflow-hidden md:w-3/5 w-4/5 h-[40rem] lg:h-[30rem] mt-14 rounded-lg border-t-4 border-textColor flex items-center justify-center relative'>
+    <form onSubmit={handleSubmit} className='bg-secondaryBGColor overflow-hidden md:w-3/5 w-4/5 h-[40rem] lg:h-[30rem] rounded-lg border-t-4 border-textColor flex items-center justify-center relative'>
       <div className='relative transition-all duration-500 ease-in-out delay-75 w-full h-full lg:pl-9 ' style={{ transform: `translateY(-${CurrentForm * 100}%)` }}>
         <div className='flex flex-col gap-4 w-full h-full items-start justify-center pl-3'>
           <h2 className='text-white text-base md:text-xl font-medium tracking-widest'>{`What's your name?`}</h2>
           <input placeholder='Type your name here.' value={fullName} onChange={(e) => setfullName(e.target.value)} required type='text' name='name' className='bg-transparent outline-none border-b-2 md:border-b-4 h-14 text-textColor font-medium text-base md:text-lg w-4/5 caret-textColor' tabIndex={-1} />
-          <div onClick={() => setCurrentForm(1)} className='bg-secondaryColor text-white w-fit py-2 px-3 flex items-center rounded-md cursor-pointer select-none'>
+          <div onClick={() => { fullName.trim() !== '' && setCurrentForm(1) }} className={cn(' text-white w-fit py-2 px-3 flex items-center rounded-md select-none', !(fullName.trim() !== '') ? 'cursor-not-allowed bg-white/10' : 'cursor-pointer bg-secondaryColor')}>
             OK
             <Check className='ml-2 h-4 w-4' />
           </div>
@@ -118,7 +148,7 @@ export default function TypeFormComponent() {
               </div>
             ))}
           </div>
-          <div onClick={() => setCurrentForm(2)} className='bg-secondaryColor text-white w-fit py-2 px-3 flex items-center rounded-md cursor-pointer select-none'>
+          <div onClick={() => { selectedOptions.length > 0 && setCurrentForm(2) }} className={cn(' text-white w-fit py-2 px-3 flex items-center rounded-md select-none', !(selectedOptions.length > 0) ? 'cursor-not-allowed bg-white/10' : 'cursor-pointer bg-secondaryColor')}>
             OK
             <Check className='ml-2 h-4 w-4' />
           </div>
@@ -126,7 +156,7 @@ export default function TypeFormComponent() {
         <div className='flex flex-col gap-4 w-full h-full items-start justify-center pl-3'>
           <h2 className='text-white text-base md:text-xl font-medium tracking-widest'>{`Great! Now please let us know your *MAIL to contact you.This question is required.*`}</h2>
           <input placeholder='example@email.com' value={emailAddress} onChange={(e) => setemailAddress(e.target.value)} type='email' name='email' className='bg-transparent outline-none border-b-2 md:border-b-4 h-14 text-textColor font-medium text-base md:text-lg w-4/5 caret-textColor' tabIndex={-1} />
-          <div onClick={() => setCurrentForm(3)} className='bg-secondaryColor text-white w-fit py-2 px-3 flex items-center rounded-md cursor-pointer select-none'>
+          <div onClick={() => { isValidEmail(emailAddress.trim()) && setCurrentForm(3) }} className={cn(' text-white w-fit py-2 px-3 flex items-center rounded-md select-none', !(isValidEmail(emailAddress.trim())) ? 'cursor-not-allowed bg-white/10' : 'cursor-pointer bg-secondaryColor')}>
             OK
             <Check className='ml-2 h-4 w-4' />
           </div>
@@ -134,7 +164,7 @@ export default function TypeFormComponent() {
         <div className='flex flex-col gap-4 w-full h-full items-start justify-center pl-3'>
           <h2 className='text-white text-base md:text-xl font-medium tracking-widest'>{`What is your Company Name ?`}</h2>
           <input placeholder='type your answer here.' value={compnayName} onChange={(e) => setcompnayName(e.target.value)} type='text' name='company' className='bg-transparent outline-none border-b-2 md:border-b-4 h-14 text-textColor font-medium text-base md:text-lg w-4/5 caret-textColor' tabIndex={-1} />
-          <div onClick={() => setCurrentForm(4)} className='bg-secondaryColor text-white w-fit py-2 px-3 flex items-center rounded-md cursor-pointer select-none'>
+          <div onClick={() => { compnayName.trim() !== '' && setCurrentForm(4) }} className={cn(' text-white w-fit py-2 px-3 flex items-center rounded-md select-none', !(compnayName.trim()) ? 'cursor-not-allowed bg-white/10' : 'cursor-pointer bg-secondaryColor')}>
             OK
             <Check className='ml-2 h-4 w-4' />
           </div>
@@ -142,7 +172,7 @@ export default function TypeFormComponent() {
         <div className='flex flex-col gap-4 w-full h-full items-start justify-center pl-3'>
           <h2 className='text-white text-base md:text-xl font-medium tracking-widest'>{`Your Website ?`}</h2>
           <input placeholder='type your answer here.' value={website} onChange={(e) => setwebsite(e.target.value)} type='text' name='website' className='bg-transparent outline-none border-b-2 md:border-b-4 h-14 text-textColor font-medium text-base md:text-lg w-4/5 caret-textColor' tabIndex={-1} />
-          <div onClick={() => setCurrentForm(5)} className='bg-secondaryColor text-white w-fit py-2 px-3 flex items-center rounded-md cursor-pointer select-none'>
+          <div onClick={() => { website.trim() !== '' && setCurrentForm(5) }} className={cn(' text-white w-fit py-2 px-3 flex items-center rounded-md select-none', !(website.trim()) ? 'cursor-not-allowed bg-white/10' : 'cursor-pointer bg-secondaryColor')}>
             OK
             <Check className='ml-2 h-4 w-4' />
           </div>
@@ -190,14 +220,14 @@ export default function TypeFormComponent() {
             </Popover>
             <input placeholder='enter your number here.' value={phoneNumber} onChange={(e) => setphoneNumber(e.target.value)} type='text' name='phone' className='bg-transparent outline-none border-b-2 md:border-b-4 h-14 text-textColor font-medium text-base md:text-lg w-4/5 caret-textColor' tabIndex={-1} />
           </div>
-          <Button onClick={handleSubmit} className='bg-secondaryColor text-white w-fit py-2 px-3 flex items-center rounded-md cursor-pointer select-none' tabIndex={-1}>
+          <Button onClick={handleSubmit} disabled={!isValidPhoneNumber(phoneNumber.trim()) || Submited || fetching} className={cn(' text-white w-fit py-2 px-3 flex items-center rounded-md select-none')} tabIndex={-1}>
+            {fetching && <Loader2 className="text-white mr-2 h-4 w-4 animate-spin" />}
             Submit
           </Button>
         </div>
       </div>
       <div className='absolute right-10 bottom-10 flex gap-4'>
-        <div onClick={()=>CurrentForm!==5?setCurrentForm(CurrentForm+1):''} className='bg-secondaryColor p-2 rounded-md cursor-pointer select-none'><ChevronDown className="h-6 w-6 text-white" /></div>
-        <div onClick={()=>CurrentForm!==0?setCurrentForm(CurrentForm-1):''} className='bg-secondaryColor p-2 rounded-md cursor-pointer select-none'><ChevronUp className="h-6 w-6 text-white" /></div>
+        <div onClick={() => CurrentForm !== 0 ? setCurrentForm(CurrentForm - 1) : ''} className='bg-secondaryColor p-2 rounded-md cursor-pointer select-none'><ChevronUp className="h-6 w-6 text-white" /></div>
       </div>
     </form>
   );

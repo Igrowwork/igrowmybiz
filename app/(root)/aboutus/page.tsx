@@ -49,7 +49,7 @@ const TeamCardComponent = [
 export default function Page() {
   return (
     <main className='bg-secondaryColor '>
-      <section className='py-10 flex flex-col gap-6 mt-14'>
+      <section className='py-10 flex flex-col gap-6'>
         <div className='w-4/5 h-52 bg-secondaryBGColor mx-auto rounded-2xl'></div>
         <div className='w-4/5 mx-auto flex flex-col gap-4'>
           <h1 className='text-white text-4xl font-bold text-center'>ABOUT US</h1>

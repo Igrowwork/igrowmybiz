@@ -15,6 +15,11 @@ import { Input } from "@/components/ui/input"
 import { useForm } from "react-hook-form"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { useState } from "react"
+import { useRouter } from "next/navigation"
+import axios from "axios"
+import { toast } from "@/components/ui/use-toast"
+import { Loader2 } from "lucide-react"
 
 const formSchema = z.object({
     name: z.string().min(2, {
@@ -33,6 +38,9 @@ const formSchema = z.object({
 })
 
 export function CareerForm() {
+    const [Loading, setLoading] = useState<boolean>(false)
+    const router = useRouter()
+
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -45,9 +53,23 @@ export function CareerForm() {
         },
     })
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        console.log(values)
-        form.reset()
+    async function onSubmit(values: z.infer<typeof formSchema>) {
+        try {
+            setLoading(true)
+            const response = await axios.post('/api/career', values)
+            toast({
+                title: response.data,
+            })
+            setLoading(false);
+            form.reset()
+            // router.replace('/thankyou')
+        } catch (error) {
+            toast({
+                title: 'Something went wrong',
+                variant: 'destructive',
+            })
+            setLoading(false);
+        }
     }
 
     return (
@@ -123,7 +145,8 @@ export function CareerForm() {
                     )}
                 />
                 <div className="flex justify-center">
-                    <Button type="submit" className='px-6 py-2 text-lg text-black sm:text-base rounded-full bg-white w-fit border-2 border-white font-semibold hover:bg-black hover:text-white transition-all duration-500'>
+                    <Button disabled={Loading} type="submit" className='px-6 py-2 text-lg text-black sm:text-base rounded-full bg-white w-fit border-2 border-white font-semibold hover:bg-black hover:text-white transition-all duration-500'>
+                        {Loading && <Loader2 className="text-black mr-2 h-4 w-4 animate-spin" />}
                         Submit
                     </Button>
                 </div>

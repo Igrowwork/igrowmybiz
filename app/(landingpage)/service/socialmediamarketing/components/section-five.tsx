@@ -1,6 +1,6 @@
 import { dancing_script } from '@/app/fonts'
 import React from 'react'
-import ServiceCard from './service-card'
+import ServiceCard from '../../components/service-card'
 import { cn } from '@/lib/utils'
 
 
@@ -8,17 +8,17 @@ const serviceData = [
     {
         heading: 'Instagram',
         listContent: ['1 Platform', 'Monthly Social Media Calender', '24 Posts Per Month', 'Upto 10 Reels (15 sec - 30 sec)', 'Upto 10 Static', '10 Images with Editing', '3 Engaging Stroies per week', 'Basic Monthly Performance Report', 'Dedicated Account Manager'],
-        href: '/contact'
+        href: '/service/contact/socialmedia'
     },
     {
         heading: 'Facebook',
         listContent: ['2 Platform', 'Monthly Social Media Calender', '30 Posts Per Month', 'Upto 15 Reels (15 sec - 30 sec)', 'Upto 15 Static', '15 Images with Editing', 'Daily Engagement/Interactions', '4 Engaging Stroies per week', 'Detailed Monthly Performance Report', 'Weekly Analysis Report', 'Dedicated Account Manager'],
-        href: '/contact'
+        href: '/service/contact/socialmedia'
     },
     {
         heading: '+2 Platform',
         listContent: ['4 Platform', 'Monthly Social Media Calender', '42 Posts Per Month', 'Upto 18 Reels (15 sec - 30 sec)', 'Upto 25 Static', '20 Images with Editing', 'Daily Engagement/Interactions', '6 Engaging Stroies per week', 'Detailed Monthly Performance Report', 'Weekly Analysis Report', 'Dedicated Account Manager'],
-        href: '/contact'
+        href: '/service/contact/socialmedia'
     },
 ]
 export default function SectionFive() {
