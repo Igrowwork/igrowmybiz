@@ -13,7 +13,7 @@ const images2 = ['Lotus Bunglows  5.png','Pachmarhi ayurveda 1.png','Pachmarhi a
 export default function Page() {
     return (
         <main className='w-full bg-secondaryColor min-h-screen'>
-            <section className='pt-32 flex flex-col gap-20 items-center'>
+            <section className='pt-5 flex flex-col gap-20 items-center'>
                 <div className='relative h-96 w-10/12 rounded-xl overflow-hidden'>
                     <div className='bg-black bg-opacity-20 sm:bg-opacity-30 absolute top-0 left-0 h-full w-full z-10'></div>
                     <Image src={"/assets/images/career.jpg"} alt='BG-Image' fill className='object-cover' />
