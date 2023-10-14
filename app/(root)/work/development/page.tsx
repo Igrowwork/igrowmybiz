@@ -8,8 +8,8 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 
 
-const images1 = [{mockup:'web_mockup.jpg', web:'https://abcapital.ae'}, {mockup:'web_mockup.jpg', web:'http://shim.co.in'}, {mockup:'web_mockup.jpg', web:'https://www.pachmarhiayurveda.com'}];
-const images2 = [{mockup:'web_mockup.jpg', web:'https://tathyabaan.in'}, {mockup:'web_mockup.jpg', web:'https://www.quikdsp.com'}, {mockup:'web_mockup.jpg', web:'https://meghaandparvtradingfze.com'}, {mockup:'web_mockup.jpg', web:'https://geolineglobal.com'}]
+const images1 = [{ mockup: 'web_mockup.jpg', web: 'https://abcapital.ae' }, { mockup: 'web_mockup.jpg', web: 'http://shim.co.in' }, { mockup: 'web_mockup.jpg', web: 'https://www.pachmarhiayurveda.com' }];
+const images2 = [{ mockup: 'web_mockup.jpg', web: 'https://tathyabaan.in' }, { mockup: 'web_mockup.jpg', web: 'https://www.quikdsp.com' }, { mockup: 'web_mockup.jpg', web: 'https://meghaandparvtradingfze.com' }, { mockup: 'web_mockup.jpg', web: 'https://geolineglobal.com' }]
 export default function Page() {
     return (
         <main className='w-full bg-secondaryColor min-h-screen'>
@@ -32,7 +32,7 @@ export default function Page() {
                     </div>
                 </div>
             </section>
-            <section className='w-4/5 mx-auto mt-10 md:flex gap-4 pb-20'>
+            <section className='w-4/5 mx-auto mt-10 md:flex gap-5 pb-20'>
                 <div className='flex flex-col md:w-1/2 gap-4'>
                     {images1.map((image, index) => <div key={index} className='md:mt-5 grow-0 shrink-0'>
                         <Dialog>
@@ -40,7 +40,7 @@ export default function Page() {
                                 <div className='w-full rounded-lg'><img src={`/assets/images/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full' /></div>
                             </DialogTrigger>
                             <DialogContent>
-                                <AspectRatio ratio={16 / 9} className='lg:w-screen lg:h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] lg:scale-75 '>
+                                <AspectRatio ratio={16 / 9} className='lg:w-screen h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] -translate-y-[40%] scale-75 '>
                                     <iframe
                                         src={image.web}
                                         width="100%"
@@ -59,7 +59,7 @@ export default function Page() {
                                 <div className='w-full h-full rounded-lg'><img src={`/assets/images/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full h-full' /></div>
                             </DialogTrigger>
                             <DialogContent>
-                                <AspectRatio ratio={16 / 9} className='lg:w-screen lg:h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] lg:scale-75 '>
+                                <AspectRatio ratio={16 / 9} className='lg:w-screen h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] -translate-y-[40%] scale-75 '>
                                     <iframe
                                         src={image.web}
                                         width="100%"
