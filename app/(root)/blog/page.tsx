@@ -3,6 +3,18 @@ import React from 'react'
 import { blogsData } from '../../../blogs'
 import Link from 'next/link'
 
+
+export async function generateMetadata({ searchParams }: { searchParams: { category: string } }) {
+    const finalBlog = await blogsData.filter((blog) => blog.category === searchParams.category)
+
+    return {
+        title: `Igrowmybiz Blogs - ${finalBlog[0]?.category}`,
+        description: `Explore ${finalBlog[0]?.category} blogs from Igrowmybiz to enhance your knowledge related to this industry.}`
+    }
+}
+
+
+
 export default function Page({ searchParams }: { searchParams: { category: string } }) {
     const finalBlogs = blogsData.filter((data) => data.category === searchParams.category)
     if (finalBlogs.length === 0) {
@@ -21,7 +33,7 @@ export default function Page({ searchParams }: { searchParams: { category: strin
                 {finalBlogs.map((blog) => <Link key={blog.id} href={`/blog/${blog.slug}`} className='md:col-span-3 xl:col-span-2 col-span-6'><div className="card relative group/card">
                     <Image src={`/assets/blogs-images/${blog.data.heroImge}`} alt='Image' fill className='object-cover' />
                     <div className='absolute h-full w-full bg-black/60 z-[9999] flex items-center px-2'>
-                        <p className='text-white text-xl text-center group-hover/card:scale-0 transition-all duration-300 tracking-wider' style={{textShadow : "2px 2px 4px #b0b0b0"}}>{blog.data.heading}</p>
+                        <p className='text-white text-xl text-center group-hover/card:scale-0 transition-all duration-300 tracking-wider' style={{ textShadow: "2px 2px 4px #b0b0b0" }}>{blog.data.heading}</p>
                     </div>
                     <div className="card__content">
                         <p className="card__title">{blog.data.heading}</p>

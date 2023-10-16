@@ -7,25 +7,25 @@ export default function HomeService() {
 
     const data = [
         {
-            bgImagePath: "/assets/images/home-service-1.jpg",
+            bgImagePath: "/assets/Hoem pages images/SMM.png",
             heading: "Social Media Marketing",
             para: "Where creativity meets connectivity, we're here to make your brand shine brighter than the summer sun. Our main focus is on creating a captivating buzz around your brand, igniting excitement and captivating the interest of your specific target audience.",
             href: '/work/socialmedia'
         },
         {
-            bgImagePath: "/assets/images/home-service-2.jpg",
+            bgImagePath: "/assets/Hoem pages images/PAM.png",
             heading: "Paid Ads Management",
             para: "Where data-driven strategies jet fuels your brand's digital dreams. We'll optimize your ad spend through laser-focused targeting, awesome creatives, and the magic of analytics. ",
             href: '/'
         },
         {
-            bgImagePath: "/assets/images/home-service-3.jpg",
+            bgImagePath: "/assets/Hoem pages images/DS.png",
             heading: "Designing Services",
             para: "At our agency, we don't just edit and design, we sculpt experiences that leave a mark. We transform ordinary footage into extraordinary works of art.",
             href: '/'
         },
         {
-            bgImagePath: "/assets/images/home-service-4.jpg",
+            bgImagePath: "/assets/Hoem pages images/dEV.png",
             heading: "Devlopment",
             para: "Our developers embark on a mission to create a website that captures the essence of the client's business and delivers a wow factor. We also take pride in delivering high-quality results on time.",
             href: '/work/development'
