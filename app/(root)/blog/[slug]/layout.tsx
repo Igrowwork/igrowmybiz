@@ -1,5 +1,7 @@
 import BlogFooter from "./components/blog-footer"
 
+
+
 export default function RootLayout({
     children,
 }: {

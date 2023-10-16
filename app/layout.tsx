@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import FacebookPixel from '@/components/FacebookPixel'
 import { inter } from './fonts'
+import { Toaster } from '@/components/ui/toaster'
 
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
+        <Toaster/>
         <FacebookPixel />
       </body>
     </html>

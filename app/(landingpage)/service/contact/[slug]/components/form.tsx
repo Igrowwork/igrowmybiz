@@ -23,7 +23,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Loader2 } from "lucide-react"
 import { useRouter } from "next/navigation"
 
@@ -39,8 +39,45 @@ const FormSchema = z.object({
             required_error: "Please select a service to display.",
         })
 })
-export function ContactForm() {
+
+const forms = {
+    development: <>
+        <SelectItem value="E-commerce">E-commerce</SelectItem>
+        <SelectItem value="Landing Page">Landing Page</SelectItem>
+        <SelectItem value="Standard Website">Standard Website</SelectItem>
+        <SelectItem value="UI-UX">UI-UX</SelectItem>
+        <SelectItem value="SEO">SEO</SelectItem>
+        <SelectItem value="Other">Other</SelectItem>
+    </>,
+    socialmedia: <>
+        <SelectItem value="Social Media Marketing">Social Media Marketing</SelectItem>
+        <SelectItem value="Account Managment">Account Managment</SelectItem>
+        <SelectItem value="Content Marketing">Content Marketing</SelectItem>
+        <SelectItem value="PR & Collaborations">PR & Collaborations</SelectItem>
+        <SelectItem value="Influencer Marketing">Influencer Marketing</SelectItem>
+        <SelectItem value="Other">Other</SelectItem>
+    </>,
+    paidads: <>
+        <SelectItem value="Facebook & Instagram Ads">Facebook & Instagram Ads</SelectItem>
+        <SelectItem value="Google Ads">Google Ads</SelectItem>
+        <SelectItem value="Pay Per Click Ads">Pay Per Click Ads</SelectItem>
+        <SelectItem value="Youtube Ads">Youtube Ads</SelectItem>
+        <SelectItem value="LinkedIn Ads">LinkedIn Ads</SelectItem>
+        <SelectItem value="Email Marketing">Email Marketing</SelectItem>
+        <SelectItem value="Other">Other</SelectItem>
+    </>,
+    design: <>
+        <SelectItem value="E-commerce">E-commerce</SelectItem>
+        <SelectItem value="Landing Page">Landing Page</SelectItem>
+        <SelectItem value="Standard Website">Standard Website</SelectItem>
+        <SelectItem value="UI-UX">UI-UX</SelectItem>
+        <SelectItem value="SEO">SEO</SelectItem>
+        <SelectItem value="Other">Other</SelectItem>
+    </>,
+}
+export function ContactForm({ routeForm }: { routeForm: string }) {
     const [Loading, setLoading] = useState<boolean>(false)
+    const [services, setServices] = useState<any>()
     const router = useRouter()
     const form = useForm<z.infer<typeof FormSchema>>({
         resolver: zodResolver(FormSchema),
@@ -54,6 +91,7 @@ export function ContactForm() {
                 title: response.data,
             })
             setLoading(false);
+            form.reset()
             router.replace('/thankyou')
         } catch (error) {
             toast({
@@ -64,17 +102,36 @@ export function ContactForm() {
         }
 
     }
+    useEffect(() => {
+        switch (routeForm) {
+            case 'development':
+                setServices(forms.development)
+                break;
+            case 'socialmedia':
+                setServices(forms.socialmedia)
+                break;
+            case 'paidads':
+                setServices(forms.paidads)
+                break;
+            case 'design':
+                setServices(forms.design)
+                break;
+            default:
+                break;
+        }
+    }, [routeForm])
+
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="lg:w-2/3 space-y-6 w-full">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-4/5">
                 <FormField
                     control={form.control}
                     name="name"
                     render={({ field }) => (
                         <FormItem>
                             <FormControl>
-                                <Input placeholder="Your Name*" {...field} className="bg-transparent text-white border-[#ffffff70] placeholder:text-[#8a8a8a]" />
+                                <Input placeholder="Your Name" {...field} className="bg-transparent  border-[1px] text-white ortext-sm" />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -86,7 +143,7 @@ export function ContactForm() {
                     render={({ field }) => (
                         <FormItem>
                             <FormControl>
-                                <Input placeholder="Your Phone No*" {...field} className="bg-transparent text-white border-[#ffffff70] placeholder:text-[#8a8a8a]" />
+                                <Input placeholder="Contact no" {...field} className="bg-transparent  border-[1px] text-white ortext-sm" />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -98,7 +155,7 @@ export function ContactForm() {
                     render={({ field }) => (
                         <FormItem>
                             <FormControl>
-                                <Input placeholder="Your Email" {...field} className="bg-transparent text-white border-[#ffffff70] placeholder:text-[#8a8a8a]" />
+                                <Input placeholder="Email Id" {...field} className="bg-transparent  border-[1px] text-white ortext-sm" />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -111,17 +168,14 @@ export function ContactForm() {
                         <FormItem>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
-                                    <SelectTrigger className="bg-transparent text-gray-400">
+                                    <SelectTrigger className="bg-transparent text-gray-400 border-[1px]">
                                         <SelectValue className="text-gray-400" placeholder="Select a service" />
                                     </SelectTrigger>
                                 </FormControl>
-                                <SelectContent className="bg-[#242424] text-white font-semibold">
-                                    <SelectItem value="E-commerce">E-commerce</SelectItem>
-                                    <SelectItem value="Landing Page">Landing Page</SelectItem>
-                                    <SelectItem value="Standard Website">Standard Website</SelectItem>
-                                    <SelectItem value="UI-UX">UI-UX</SelectItem>
-                                    <SelectItem value="SEO">SEO</SelectItem>
-                                    <SelectItem value="Other">Other</SelectItem>
+                                <SelectContent className="bg-[#242424] text-white">
+                                    {
+                                        services
+                                    }
                                 </SelectContent>
                             </Select>
                             <FormMessage />
@@ -134,7 +188,7 @@ export function ContactForm() {
                     render={({ field }) => (
                         <FormItem>
                             <FormControl>
-                                <Textarea placeholder="Your Message*" {...field} className="bg-transparent text-white border-[#ffffff70] placeholder:text-[#8a8a8a]" />
+                                <Textarea placeholder="Why should we hire you..." {...field} className="bg-transparent  border-[1px] text-white text-sm" />
                             </FormControl>
                             <FormMessage />
                         </FormItem>

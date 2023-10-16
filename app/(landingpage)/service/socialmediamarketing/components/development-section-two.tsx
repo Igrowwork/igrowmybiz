@@ -10,8 +10,8 @@ export default function DevelopmentSectionTwo() {
     return (
         <section className='bg-black h-fit pt-10'>
             <div className='lg:flex lg:flex-row-reverse lg:w-4/5 mx-auto items-center'>
-                <div className='w-[80%] lg:w-1/2 mx-auto float lg:ml-20'>
-                    <img src="/assets/images/testn-7643072f.png" alt="media" className=' ' />
+                <div className='w-[80%] lg:w-1/2 mx-auto float lg:ml-20 flex items-center justify-center'>
+                    <img src="/assets/images/social media marketing-01.png" alt="media" className='h-72 lg:h-80' />
                 </div>
                 <div className='w-[90%] lg:w-1/2 mx-auto flex flex-col gap-6 lg:gap-6 py-10'>
                     <h2 className='text-white text-center flex flex-col text-4xl font-bold lg:items-start'><span className={cn(dancing_script.className, 'text-mainColor font-semibold text-xl sm:text-lg md:text-xl ')}>What</span><span>We <span className='text-mainColor'>Offer</span></span></h2>

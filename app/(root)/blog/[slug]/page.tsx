@@ -4,6 +4,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
+export async function generateMetadata({ params }: { params: { slug: string } }, parent:any) {
+    const finalBlog = await blogsData.filter((blog) => blog.slug === params.slug)
+
+    return {
+        title: `${finalBlog[0].data.heading}`,
+        description: `${finalBlog[0].data.shortContent}`
+    }
+}
+
+
+
 export default function Page({ params }: { params: { slug: string } }) {
     const finalBlog = blogsData.filter((blog) => blog.slug === params.slug)
     const relatedBlogs = blogsData.filter((blog) => blog.category === finalBlog[0].category && blog.slug !== params.slug);

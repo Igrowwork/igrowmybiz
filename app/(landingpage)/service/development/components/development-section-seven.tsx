@@ -118,7 +118,7 @@ export default function DevelopmentSectionSeven() {
 
                 </div>
                 <div className='p-[2px] w-fit h-fit rounded-full float btn-background mx-auto mt-10'>
-                    <Link href={'/contact'}>
+                    <Link href={'/service/contact/development'}>
                         <Button className='px-7 py-6 rounded-full bg-black select-none'>
                             Contact Us
                         </Button>

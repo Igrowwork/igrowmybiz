@@ -2,6 +2,7 @@ import React from 'react'
 import Countdown1 from '../components/count-down'
 import FoundersCards from '../components/founders-card'
 import TeamCard from '../components/team-card'
+import Image from 'next/image'
 
 const TeamCardComponent = [
   {
@@ -35,7 +36,7 @@ const TeamCardComponent = [
     expertise: 'Expertise-Marketing Strategies, Social Media & Google Ads, Email & WhatsApp Automation.'
   },
   {
-    image: 'anshita-shukla.jpeg',
+    image: 'kamran.png',
     position: 'Front-End Developer',
     expertise: 'ReactJs, NextJs, TailwindCSS, WordPress, Responsive Design, GitHub, JavaScript/TypeScript'
   },
@@ -49,8 +50,8 @@ const TeamCardComponent = [
 export default function Page() {
   return (
     <main className='bg-secondaryColor '>
-      <section className='py-10 flex flex-col gap-6 mt-14'>
-        <div className='w-4/5 h-52 bg-secondaryBGColor mx-auto rounded-2xl'></div>
+      <section className='py-10 flex flex-col gap-6'>
+        <div className='w-4/5 h-24 md:h-52 mx-auto rounded-2xl relative'><Image src={'/assets/Hoem pages images/Cover page.png'} alt='cover bg' fill className='object-cover rounded-2xl'/></div>
         <div className='w-4/5 mx-auto flex flex-col gap-4'>
           <h1 className='text-white text-4xl font-bold text-center'>ABOUT US</h1>
           <p className='text-textColor text-center lg:w-4/5 mx-auto'>{`Welcome to IGrowMyBiz, founded in July 2022 by marketing enthusiasts Aadarsh and Sarfaraz. With over 4 years of digital marketing experience in Bhopal, MP.
