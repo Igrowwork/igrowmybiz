@@ -36,24 +36,6 @@
     animation: scrollFour 120s linear infinite;
     /* Adjust the animation duration as needed */
 }
-.btn-background {
-    background: linear-gradient(to right, #6557ff, #aa3fff 30%, #fcf74a 60%, #f8522e);
-}
-.float {
-    animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(-20%);
-    }
-
-    50% {
-        transform: translateY(0%);
-    }
-}
 
 @keyframes flick {
     0% {

@@ -38,8 +38,8 @@ export default function HomeService() {
                 <Image src={data.bgImagePath} alt='BG Image' fill className='object-cover' />
                 <Link href={data.href} className='absolute bottom-0 h-[25%] group-hover/animatedService:h-full transition-all ease-in-out duration-300 bg-opacity-20 backdrop-blur bg-white z-10 w-full'>
                     <div className='flex flex-col justify-center gap-5 absolute bottom-2 md:bottom-6 lg:bottom-8 left-2'>
-                        <h2 className='text-2xl font-semibold'>{data.heading}</h2>
-                        <p className='hidden group-hover/animatedService:block font-bold transition-all ease-in-out'>
+                        <h2 className='text-2xl font-bold text-gray-900'>{data.heading}</h2>
+                        <p className='hidden group-hover/animatedService:block font-medium transition-all ease-in-out'>
                             {data.para}
                         </p>
                         <ChevronRight className='h-8 w-8 bg-white rounded-full' />
