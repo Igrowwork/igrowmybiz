@@ -6,19 +6,19 @@ import ServiceCard from '../../components/service-card'
 
 const serviceData = [
     {
-        heading: 'E-commerce',
-        listContent: ['Upto 100 products', 'Payment Gateway', 'Admin Dashboard', 'User Accounts', 'On Page SEO'],
-        href: '/service/contact/development'
+        heading: 'Branding Kit',
+        listContent: ['Logo Design', 'Brand Identity Design', 'Business Card Design', 'LetterHead', 'Color Palette, Brand Typography & Style Guide','Email Signature','Ads','Miscellaneous Assets'],
+        href: '/service/contact/design'
     },
     {
-        heading: 'Landing Page',
-        listContent: ['Fast Single-page site', 'Responsive Design', 'Custom Form with DB', 'Thank You Page', 'On Page SEO'],
-        href: '/service/contact/development'
+        heading: 'Videos & Graphic Design',
+        listContent: ['Explainer Videos', 'Carousels', 'Instagram Reels', 'Youtube Videos', 'Videography and video editing','Social Media Creatives','Email Design Templates','Banner ads & Online ads design'],
+        href: '/service/contact/design'
     },
     {
-        heading: 'Company',
-        listContent: ['Upto 10 pages', 'Responsive Design', 'Custom Form with DB', 'Blogs', 'On Page SEO'],
-        href: '/service/contact/development'
+        heading: 'Other Designing Services',
+        listContent: ['Illustration Packages', 'Packaging Design', '2D & 3D Animations', 'Ads Shoots & Production'],
+        href: '/service/contact/design'
     },
 ]
 export default function SectionFive() {
@@ -30,7 +30,7 @@ export default function SectionFive() {
             </div>
             <div className='w-[80%] md:w-[70%] mx-auto lg:mx-0 plans-card'>
                 <div className='w-full flex flex-wrap lg:flex-row lg:flex-nowrap gap-6 justify-between'>
-                    {serviceData.map((items)=><ServiceCard key={items.heading} tagline='Website' heading={items.heading} list={items.listContent} href={items.href} />)}                    
+                    {serviceData.map((items)=><ServiceCard key={items.heading} tagline='Package' heading={items.heading} list={items.listContent} href={items.href} />)}                    
                 </div>
             </div>
         </section>

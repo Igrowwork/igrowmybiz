@@ -48,7 +48,7 @@ export default function MayankShergilCaseStudy() {
 
                 <div className='md:px-[10%]'>
                     <div className='bg-secondaryBGColor h-full w-full flex flex-col lg:flex-row rounded-lg overflow-hidden'>
-                        <div className='bg-blue-500 w-full lg:w-[40%] h-[300px] md:h-[500px] lg:order-2'></div>
+                        <div className='bg-blue-500 w-full lg:w-[40%] h-[300px] md:h-[500px] lg:order-2 relative'><Image src={'/assets/case studies/MS objective.png'} alt='' fill className='object-cover'/></div>
                         <div className='py-5 my-auto lg:w-[60%]'>
                             <h3 className='text-3xl font-bold tracking-widest mb-2 pl-5'>OBJECTIVE :</h3>
                             <p className='text-textColor md:text-lg pl-5 mb-8 pr-5 lg:pr-0'>We started with a very clear objective that they wanted us to target and eventually achieve:</p>
@@ -64,7 +64,7 @@ export default function MayankShergilCaseStudy() {
 
                 <div className='md:px-[10%]'>
                     <div className='bg-secondaryBGColor h-full w-full flex flex-col lg:flex-row overflow-hidden rounded-lg'>
-                        <div className='bg-green-500 w-full lg:w-[40%] h-[300px] md:h-[500px]'></div>
+                        <div className='bg-green-500 w-full lg:w-[40%] h-[300px] md:h-[500px] relative'><Image src={'/assets/case studies/MS problem.png'} alt='' fill className='object-cover'/></div>
                         <div className='py-5 my-auto lg:w-[60%]'>
                             <h3 className='text-3xl font-bold tracking-widest mb-2 pl-5'>CHALLENGE :</h3>
                             <p className='text-textColor md:text-lg pl-5 mb-8 mr-5 lg:pr-0'>They were starting out with a tight budget to invest in their business, hence we had to deliver all their requirements according to that:</p>

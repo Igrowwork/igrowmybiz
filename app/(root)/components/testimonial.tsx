@@ -1,6 +1,7 @@
 "use client"
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import Image from 'next/image'
 import React, { useState } from 'react'
 
 const TestimonialsContent = [
@@ -20,7 +21,7 @@ const TestimonialsContent = [
         Name: 'Dr. Pushpendra Tiwari',
         CompanyName: 'Founder of Rehab Masters',
         Review: 'Built a Great Website for me Great efforts from team , listened to all My queries and cleared them all , Thank  you Igrowmybiz',
-        media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/9DhuWapDDrw?si=Y6vr5Qjts9gyygHZ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        media: <Image src={'/assets/images/pushpendra_tiwari.jpeg'} alt='' fill className='object-cover rounded-lg'/>
     },
     {
         Name: 'Ankur Chaurasia',

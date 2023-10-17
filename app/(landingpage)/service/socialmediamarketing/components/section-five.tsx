@@ -30,7 +30,7 @@ export default function SectionFive() {
             </div>
             <div className='w-[80%] md:w-[70%] mx-auto lg:mx-0 plans-card'>
                 <div className='w-full flex flex-wrap lg:flex-row lg:flex-nowrap gap-6 justify-between'>
-                    {serviceData.map((items)=><ServiceCard key={items.heading} heading={items.heading} list={items.listContent} href={items.href} />)}                    
+                    {serviceData.map((items)=><ServiceCard key={items.heading} tagline='Marketing' heading={items.heading} list={items.listContent} href={items.href} />)}                    
                 </div>
             </div>
         </section>
