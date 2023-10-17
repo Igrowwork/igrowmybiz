@@ -67,11 +67,12 @@ const forms = {
         <SelectItem value="Other">Other</SelectItem>
     </>,
     design: <>
-        <SelectItem value="E-commerce">E-commerce</SelectItem>
-        <SelectItem value="Landing Page">Landing Page</SelectItem>
-        <SelectItem value="Standard Website">Standard Website</SelectItem>
-        <SelectItem value="UI-UX">UI-UX</SelectItem>
-        <SelectItem value="SEO">SEO</SelectItem>
+        <SelectItem value="Logo Design">Logo Design</SelectItem>
+        <SelectItem value="Motion Graphics">Motion Graphics</SelectItem>
+        <SelectItem value="Videos storytelling redefined">Videos storytelling redefined</SelectItem>
+        <SelectItem value="Packaging design">Packaging design</SelectItem>
+        <SelectItem value="Ads Production">Ads Production</SelectItem>
+        <SelectItem value="Graphics and Identity">Graphics and Identity</SelectItem>
         <SelectItem value="Other">Other</SelectItem>
     </>,
 }

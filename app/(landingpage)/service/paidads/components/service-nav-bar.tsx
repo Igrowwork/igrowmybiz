@@ -27,7 +27,7 @@ export default function PaidAdsNavBar() {
     }, []);
     return (
         <nav className={cn(!logoWidth ? 'bg-none h-14 w-full fixed top-0 z-20 px-5 lg:px-20 flex justify-between items-center py-10 transition-all delay-75 ease-in-out ' : 'bg-black transition-all delay-75 ease-in-out h-10 w-full fixed top-0 z-20 px-5 lg:px-20 flex justify-between items-center py-8 smoothWhiteShadow')}>
-            <Link href={'/'}>
+            <Link href={'/services'}>
                 <div className='relative h-full w-28 flex items-center'>
                     <Image
                         src={'/assets/images/new logo-a4aa82bd.png'}
