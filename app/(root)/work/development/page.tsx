@@ -8,8 +8,8 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 
 
-const images1 = [{ mockup: 'web_mockup.jpg', web: 'https://abcapital.ae' }, { mockup: 'web_mockup.jpg', web: 'http://shim.co.in' }, { mockup: 'web_mockup.jpg', web: 'https://www.pachmarhiayurveda.com' }];
-const images2 = [{ mockup: 'web_mockup.jpg', web: 'https://tathyabaan.in' }, { mockup: 'web_mockup.jpg', web: 'https://www.quikdsp.com' }, { mockup: 'web_mockup.jpg', web: 'https://meghaandparvtradingfze.com' }, { mockup: 'web_mockup.jpg', web: 'https://geolineglobal.com' }]
+const images1 = [{ mockup: 'abcapitals mockup.png', web: 'https://abcapital.ae' }, { mockup: 'SHIM MOCKUP.png', web: 'http://shim.co.in' }, { mockup: 'pachmarhi ayurceda mock.png', web: 'https://www.pachmarhiayurveda.com' }];
+const images2 = [{ mockup: 'tathyabaan mockup.png', web: 'https://tathyabaan.in' }, { mockup: 'quikdsp mockup.png', web: 'https://www.quikdsp.com' }, { mockup: 'megha and parv mockup.png', web: 'https://meghaandparvtradingfze.com' }, { mockup: 'geoline mockup.png', web: 'https://geolineglobal.com' }]
 export default function Page() {
     return (
         <main className='w-full bg-secondaryColor min-h-screen'>
@@ -37,7 +37,7 @@ export default function Page() {
                     {images1.map((image, index) => <div key={index} className='md:mt-5 grow-0 shrink-0'>
                         <Dialog>
                             <DialogTrigger asChild>
-                                <div className='w-full rounded-lg'><img src={`/assets/images/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full' /></div>
+                                <div className='w-full rounded-lg'><img src={`/assets/web mockups/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full' /></div>
                             </DialogTrigger>
                             <DialogContent>
                                 <AspectRatio ratio={16 / 9} className='lg:w-screen h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] -translate-y-[40%] scale-75 '>
@@ -56,7 +56,7 @@ export default function Page() {
                     {images2.map((image, index) => <div key={index} className='md:mb-3 grow-0 shrink-0'>
                         <Dialog>
                             <DialogTrigger asChild>
-                                <div className='w-full h-full rounded-lg'><img src={`/assets/images/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full h-full' /></div>
+                                <div className='w-full h-full rounded-lg'><img src={`/assets/web mockups/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full h-full' /></div>
                             </DialogTrigger>
                             <DialogContent>
                                 <AspectRatio ratio={16 / 9} className='lg:w-screen h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] -translate-y-[40%] scale-75 '>
