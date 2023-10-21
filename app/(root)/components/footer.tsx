@@ -10,13 +10,13 @@ export default function Footer() {
     return (
 
         <footer className='bg-[#141414] border-t flex justify-center w-full border-white/10'>
-            <div className='w-full flex flex-col gap-5 lg:gap-0 lg:flex-row items-center justify-between md:px-10 lg:px-20 py-6'>
+            <div className='w-full flex flex-col gap-5 lg:gap-0 lg:flex-row items-start md:items-center justify-between px-10 lg:px-20 py-6'>
                 <div className='relative h-5 w-40 hover:scale-125 transition-all ease-in-out duration-500'>
                     <Link href="/">
                         <Image src={"/assets/images/new logo-a4aa82bd.png"} alt='logo' fill className='object-contain' />
                     </Link>
                 </div>
-                <div className='flex flex-col md:flex-row gap-5 md:gap-10 items-center'>
+                <div className='hidden flex-col md:flex-row gap-5 md:gap-10 items-center  lg:flex'>
                     <FooterRoutes/>
                 </div>
                 <div className='flex gap-2'>

@@ -12,7 +12,7 @@ export default function StickyIcons() {
     const path = usePathname()
 
     return (
-        <div className={cn('flex flex-col gap-5 h-fit w-fit fixed right-5 top-[70%] z-50 items-end', path === '/contact' ? 'hidden' : '')}>
+        <div className={cn('flex flex-col gap-5 h-fit w-fit fixed right-5 lg:top-[70%] top-[80%]  z-50 items-end', path === '/contact' ? 'hidden' : '')}>
             <a className='relative bg-textColor rounded-full p-2 hover:scale-110 transition-all duration-200 group/whatsapp w-12 h-12 flex items-center justify-center' href='https://wa.me/+916264755339'>
                 <Image src={"/whatsapp-svg.svg"} alt='contact icon' height={50} width={50} className='object-contain h-7 w-7 md:h-8 md:w-8 group-hover/whatsapp:hidden' />
                 <Image src={"/whatsapp-color-svg.svg"} alt='contact icon' height={50} width={50} className='object-contain h-7 w-7 md:h-8 md:w-8 hidden group-hover/whatsapp:block' />
