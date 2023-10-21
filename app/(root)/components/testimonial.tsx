@@ -24,9 +24,9 @@ const TestimonialsContent = [
         media: <Image src={'/assets/images/pushpendra_tiwari.jpeg'} alt='' fill className='object-cover rounded-lg'/>
     },
     {
-        Name: 'Ankur Chaurasia',
+        Name: 'Komal Sharma',
         CompanyName: 'NEARBUY.COM',
-        Review: 'I am so impressed with the details and the planning that it felt like we have been working together for such a long time. Would strongly recommend them if you want anything to do with video.',
+        Review: 'You people are doing amazing job..I would like to thank you for handling all the social media platforms of SHIM College with so much of efficiency and hard-work. Your team is highly dedicated towards their clients. You understand the needs so well and do the work accordingly.',
         media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/9DhuWapDDrw?si=Y6vr5Qjts9gyygHZ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
     },
     {
