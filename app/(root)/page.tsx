@@ -6,7 +6,14 @@ import Image from 'next/image'
 import Testimonials from './components/testimonial'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import Slider from './components/slider'
+import Countdown1 from './components/count-down'
+import { Metadata } from 'next'
 
+
+export const metadata: Metadata = {
+  title: 'Igrowmybiz',
+  description: 'Social media marketing agency',
+}
 
 const images = ['abcap-a3be2e4f.png', 'bbb-016bebb4.png', 'geoline-221c69ce.png', 'magha-6b5980fd.png', 'more-09e1cd70.png', 'quikdsp-5b6fab73.png', 'rapido-710258dc.png', 'shim-1e9caefd.png', '12 Nov Logo new 01.png', 'Bluejay.png', 'day events logo.png', 'logo (1).png', 'Logo Design.png', 'output-onlinepngtools (2).png', 'vishal lo for whit vid.png', 'abcap-a3be2e4f.png', 'bbb-016bebb4.png', 'geoline-221c69ce.png', 'magha-6b5980fd.png', 'more-09e1cd70.png', 'quikdsp-5b6fab73.png', 'rapido-710258dc.png', 'shim-1e9caefd.png', '12 Nov Logo new 01.png', 'Bluejay.png', 'day events logo.png', 'logo (1).png', 'Logo Design.png', 'output-onlinepngtools (2).png', 'vishal lo for whit vid.png',]
 export default function Home() {
@@ -23,10 +30,10 @@ export default function Home() {
               Our Services
             </Link>
           </div>
-          <div className='w-full h-full absolute z-20 bg-black md:hidden opacity-70'/>
+          <div className='w-full h-full absolute z-20 bg-black md:hidden opacity-70' />
           <div className='w-full md:w-[40%] h-full absolute top-0 left-0 md:left-[95%] z-10 md:-translate-x-full '>
             <div className='bg-gray-400 h-full w-full relative rounded-md'>
-              <Slider/>
+              <Slider />
             </div>
           </div>
         </section>
@@ -41,10 +48,39 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className='sm:w-[45%] w-full mx-auto my-2'>
+          {/* <div className='sm:w-[45%] w-full mx-auto my-2'>
             <AspectRatio ratio={16 / 9}>
               <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/9DhuWapDDrw?si=Y6vr5Qjts9gyygHZ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </AspectRatio>
+          </div> */}
+          <div className='py-10'>
+            <div className='w-4/5 bg-secondaryBGColor mx-auto rounded-2xl p-12 flex flex-col gap-4 xl:flex-row'>
+              <div className='flex flex-col gap-4 xl:w-1/2'>
+                <h2 className='text-white font-semibold text-center text-xl'>What do we do?</h2>
+                <p className='text-textColor text-center'>Our main aim is to focus on business development, content marketing, social media marketing, meme marketing, SEOs, Paid ads (google & meta), Website Development, Ad Production, PR strategies.</p>
+              </div>
+              <div className='bg-black rounded-xl flex flex-col md:grid grid-cols-3 gap-2 lg:gap-4 p-2 lg:p-4'>
+                <div className='text-white rounded-xl bg-secondaryBGColor p-2 flex flex-col items-center justify-center'>
+                  <p className='text-center'>
+
+                    <Countdown1 initialCount={100} timeDuration={50} symbol='+' />
+                    Projects Completed
+                  </p>
+                </div>
+                <div className='text-white rounded-xl bg-secondaryBGColor p-2 flex flex-col items-center justify-center'>
+                  <p className='text-center'>
+                    <Countdown1 initialCount={45} timeDuration={100} symbol='+' />
+                    Happy Clients
+                  </p>
+                </div>
+                <div className='text-white rounded-xl bg-secondaryBGColor p-2 flex flex-col items-center justify-center'>
+                  <p className='text-center'>
+                    <Countdown1 initialCount={90} timeDuration={70} symbol='%' />
+                    Client Retaintion Rate
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           <div className='py-2 lg:py-4 lg:h-28 h-24'>
             <div className='relative h-full w-full overflow-hidden mx-auto'>
