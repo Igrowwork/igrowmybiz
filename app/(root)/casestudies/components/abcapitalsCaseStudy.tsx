@@ -49,7 +49,7 @@ export default function ABcapitalsCaseStudy() {
 
                 <div className='md:px-[10%]'>
                     <div className='bg-secondaryBGColor h-full w-full flex flex-col lg:flex-row overflow-hidden rounded-lg'>
-                        <div className='bg-blue-500 w-full lg:w-[40%] h-[300px] md:h-[500px] lg:order-2'></div>
+                        <div className='bg-blue-500 w-full lg:w-[40%] h-[300px] md:h-[500px] lg:order-2 relative'><Image src={'/assets/case studies/ab capitals objective.png'} alt='' fill className='object-cover'/></div>
                         <div className='py-5 my-auto lg:w-[60%]'>
                             <h3 className='text-3xl font-bold tracking-widest mb-2 pl-5'>OBJECTIVE :</h3>
                             <p className='text-textColor md:text-lg pl-5 mb-8 pr-5 lg:pr-0'>With an extensive list of requirements, as the previous agency they worked with failed to deliver results, our task was to address and fulfill their needs. Some of these included:</p>
@@ -65,7 +65,7 @@ export default function ABcapitalsCaseStudy() {
 
                 <div className='md:px-[10%]'>
                     <div className='bg-secondaryBGColor h-full w-full flex flex-col lg:flex-row overflow-hidden rounded-lg'>
-                        <div className='bg-green-500 w-full lg:w-[40%] h-[300px] md:h-[500px]'></div>
+                        <div className='bg-green-500 w-full lg:w-[40%] h-[300px] md:h-[500px] relative'><Image src={'/assets/case studies/ab capitals challenge.png'} alt='' fill className='object-cover'/></div>
                         <div className='py-5 my-auto lg:w-[60%]'>
                             <h3 className='text-3xl font-bold tracking-widest mb-2 pl-5'>CHALLENGE :</h3>
                             <p className='text-textColor md:text-lg pl-5 mb-8 mr-5 lg:pr-0'>Navigating the challenges of working with a foreign based company, we dedicated ourselves in understanding their work pattern and the specific things they aimed on. The following challenges emerged during the time:</p>

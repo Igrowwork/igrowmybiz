@@ -3,6 +3,7 @@ import Countdown1 from '../components/count-down'
 import FoundersCards from '../components/founders-card'
 import TeamCard from '../components/team-card'
 import Image from 'next/image'
+import { Metadata } from 'next'
 
 const TeamCardComponent = [
   {
@@ -46,12 +47,16 @@ const TeamCardComponent = [
     expertise: 'NodeJS, REST API, GraphQL API, MongoDB, PostgreSQL, MySQL, Redis, Paypal and Stripe.'
   },
 ]
+export const metadata: Metadata = {
+  title: 'Igrowmybiz - about us',
+  description: 'Social media marketing agency - about us',
+}
 
 export default function Page() {
   return (
     <main className='bg-secondaryColor '>
       <section className='py-10 flex flex-col gap-6'>
-        <div className='w-4/5 h-24 md:h-52 mx-auto rounded-2xl relative'><Image src={'/assets/Hoem pages images/Cover page.png'} alt='cover bg' fill className='object-cover rounded-2xl'/></div>
+        <div className='w-4/5 h-24 md:h-52 mx-auto rounded-2xl relative'><Image src={'/assets/Hoem pages images/Cover page.png'} alt='cover bg' fill className='object-cover rounded-2xl' /></div>
         <div className='w-4/5 mx-auto flex flex-col gap-4'>
           <h1 className='text-white text-4xl font-bold text-center'>ABOUT US</h1>
           <p className='text-textColor text-center lg:w-4/5 mx-auto'>{`Welcome to IGrowMyBiz, founded in July 2022 by marketing enthusiasts Aadarsh and Sarfaraz. With over 4 years of digital marketing experience in Bhopal, MP.
@@ -99,7 +104,7 @@ export default function Page() {
           </div>
           <div className='flex flex-col gap-5 md:flex-row'>
             <FoundersCards image='adarsh_jatav_close.png' info="Aadarsh from Pachmarhi kept pursuing his passion for tech and content, which began during his exploration of digital marketing in the 11th grade. After several years of freelancing and numerous cold calls and emails, he found his specialization in building effective digital marketing strategies through content. Aadarsh founded Igrow with Sarfaraz, realizing that their expertise in content could significantly benefit brands in the realm of organic marketing" insta='https://www.instagram.com/thisisaadarshh/' linkedin='https://www.linkedin.com/in/aadarsh-kumar-3b44a1170/' name='Aadarsh Kumar' mail='aadarsh@igrowmybiz.com' />
-            <FoundersCards image='sarfaraz_photo.jpg' info="I'm Sarfaraz Ajm Abadi, co-founder of our IGROW MY BIZ. With an electrical engineering background and over three years in organic social media marketing, brand building, and business growth expert, I bring a unique blend of technical expertise and marketing prowess. My passion lies in crafting innovative strategies to enhance brand visibility and drive sustainable growth. I'm dedicated to staying ahead of industry trends to propel our venture forward. Together with our talented team, we're shaping a brand that resonates, one connection at a time, Join us, and let's create success together!" insta='https://www.instagram.com/digitalabadii/' linkedin='https://www.linkedin.com/in/sarfaraz-ajm-abadi-8636231b4/ ' name='Sarfaraz Ajm Abadi' mail='sarfaraz@igrowmybiz.com'/>
+            <FoundersCards image='sarfaraz_photo.jpg' info="I'm Sarfaraz Ajm Abadi, co-founder of our IGROW MY BIZ. With an electrical engineering background and over three years in organic social media marketing, brand building, and business growth expert, I bring a unique blend of technical expertise and marketing prowess. My passion lies in crafting innovative strategies to enhance brand visibility and drive sustainable growth. I'm dedicated to staying ahead of industry trends to propel our venture forward. Together with our talented team, we're shaping a brand that resonates, one connection at a time, Join us, and let's create success together!" insta='https://www.instagram.com/digitalabadii/' linkedin='https://www.linkedin.com/in/sarfaraz-ajm-abadi-8636231b4/ ' name='Sarfaraz Ajm Abadi' mail='sarfaraz@igrowmybiz.com' />
           </div>
         </div>
       </section>

@@ -8,8 +8,8 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 
 
-const images1 = [{ mockup: 'web_mockup.jpg', web: 'https://abcapital.ae' }, { mockup: 'web_mockup.jpg', web: 'http://shim.co.in' }, { mockup: 'web_mockup.jpg', web: 'https://www.pachmarhiayurveda.com' }];
-const images2 = [{ mockup: 'web_mockup.jpg', web: 'https://tathyabaan.in' }, { mockup: 'web_mockup.jpg', web: 'https://www.quikdsp.com' }, { mockup: 'web_mockup.jpg', web: 'https://meghaandparvtradingfze.com' }, { mockup: 'web_mockup.jpg', web: 'https://geolineglobal.com' }]
+const images1 = [{ mockup: 'abcapitals mockup.png', web: 'https://abcapital.ae' }, { mockup: 'SHIM MOCKUP.png', web: 'http://shim.co.in' }, { mockup: 'pachmarhi ayurceda mock.png', web: 'https://www.pachmarhiayurveda.com' }];
+const images2 = [{ mockup: 'tathyabaan mockup.png', web: 'https://tathyabaan.in' }, { mockup: 'quikdsp mockup.png', web: 'https://www.quikdsp.com' }, { mockup: 'megha and parv mockup.png', web: 'https://meghaandparvtradingfze.com' }, { mockup: 'geoline mockup.png', web: 'https://geolineglobal.com' }]
 export default function Page() {
     return (
         <main className='w-full bg-secondaryColor min-h-screen'>
@@ -18,7 +18,7 @@ export default function Page() {
                     <div className='bg-black bg-opacity-20 sm:bg-opacity-30 absolute top-0 left-0 h-full w-full z-10'></div>
                     <Image src={"/assets/images/career.jpg"} alt='BG-Image' fill className='object-cover' />
                     <div className='flex flex-col gap-10 justify-center items-center px-5 sm:px-0 mb-10 z-10 relative h-full bg-black/50'>
-                        <h2 className='text-white text-3xl font-bold text-center flex flex-col'>IgrowMyBiz <span className={cn(dancing_script.className, 'text-mainColor -mt-4')}>Social Media Works</span></h2>
+                        <h2 className='text-white text-3xl font-bold text-center flex flex-col'>IgrowMyBiz <span className={cn(dancing_script.className, 'text-mainColor -mt-4')}>Website Development Works</span></h2>
                         <p className='text-white text-center flex flex-col font-semibold gap-3 md:text-xl'>
                             Igrow Social is a digital marketing agency, that’s beyond social.
                             <span className='text-white/70 font-normal text-sm md:text-base'>
@@ -37,7 +37,7 @@ export default function Page() {
                     {images1.map((image, index) => <div key={index} className='md:mt-5 grow-0 shrink-0'>
                         <Dialog>
                             <DialogTrigger asChild>
-                                <div className='w-full rounded-lg'><img src={`/assets/images/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full' /></div>
+                                <div className='w-full rounded-lg cursor-pointer'><img src={`/assets/web mockups/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full' /></div>
                             </DialogTrigger>
                             <DialogContent>
                                 <AspectRatio ratio={16 / 9} className='lg:w-screen h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] -translate-y-[40%] scale-75 '>
@@ -56,7 +56,7 @@ export default function Page() {
                     {images2.map((image, index) => <div key={index} className='md:mb-3 grow-0 shrink-0'>
                         <Dialog>
                             <DialogTrigger asChild>
-                                <div className='w-full h-full rounded-lg'><img src={`/assets/images/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full h-full' /></div>
+                                <div className='w-full h-full rounded-lg cursor-pointer'><img src={`/assets/web mockups/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full h-full' /></div>
                             </DialogTrigger>
                             <DialogContent>
                                 <AspectRatio ratio={16 / 9} className='lg:w-screen h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] -translate-y-[40%] scale-75 '>

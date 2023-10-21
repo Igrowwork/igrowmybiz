@@ -1,18 +1,19 @@
 "use client"
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import Image from 'next/image'
 import React, { useState } from 'react'
 
 const TestimonialsContent = [
     {
         Name: 'Mayank Shergill',
-        CompanyName: 'NEARBUY.COM',
-        Review: 'I am so impressed with the details and the planning that it felt like we have been working together for such a long time. Would strongly recommend them if you want anything to do with video.',
+        CompanyName: 'bigbullboy.com',
+        Review: "Team igrow my biz stand with me when i was nothing in industry right now i am having more portfolies in cr's and the main reason behind is their marketing and creativity for optimized my social media.",
         media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/wvxYQwPdZ5E?si=Lu5MGcXNcmfeANs3" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
     },
     {
         Name: 'Vanya',
-        CompanyName: 'NEARBUY.COM',
+        CompanyName: 'The Geeky Yougin',
         Review: 'I am so impressed with the details and the planning that it felt like we have been working together for such a long time. Would strongly recommend them if you want anything to do with video.',
         media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/Mn6NRhWTViw?si=F6UrWm4i3Rm5VKF_" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
     },
@@ -20,31 +21,31 @@ const TestimonialsContent = [
         Name: 'Dr. Pushpendra Tiwari',
         CompanyName: 'Founder of Rehab Masters',
         Review: 'Built a Great Website for me Great efforts from team , listened to all My queries and cleared them all , Thank  you Igrowmybiz',
-        media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/9DhuWapDDrw?si=Y6vr5Qjts9gyygHZ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        media: <Image src={'/assets/images/pushpendra_tiwari.jpeg'} alt='' fill className='object-cover rounded-lg'/>
     },
     {
-        Name: 'Ankur Chaurasia',
-        CompanyName: 'NEARBUY.COM',
-        Review: 'I am so impressed with the details and the planning that it felt like we have been working together for such a long time. Would strongly recommend them if you want anything to do with video.',
-        media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/9DhuWapDDrw?si=Y6vr5Qjts9gyygHZ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        Name: 'Dr. Komal Taneja',
+        CompanyName: 'shim.co.in',
+        Review: 'You people are doing amazing job..I would like to thank you for handling all the social media platforms of SHIM College with so much of efficiency and hard-work. Your team is highly dedicated towards their clients. You understand the needs so well and do the work accordingly.',
+        media: <Image src={'/assets/images/komal.jpeg'} alt='' fill className='object-cover object-top rounded-lg'/>
     },
     {
-        Name: 'Ankur Singh',
-        CompanyName: 'NEARBUY.COM',
-        Review: 'I am so impressed with the details and the planning that it felt like we have been working together for such a long time. Would strongly recommend them if you want anything to do with video.',
-        media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/9DhuWapDDrw?si=Y6vr5Qjts9gyygHZ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        Name: 'Adey Torry',
+        CompanyName: 'Marketing Head at Edtech',
+        Review: 'They have a proven track record of success on consultancy firm marketing and they are always ready to go that extra mile for us.',
+        media: <Image src={'/assets/images/person-icon.png'} alt='' fill className='object-contain rounded-lg'/>
     },
     {
-        Name: 'Ankur Khalsa',
-        CompanyName: 'NEARBUY.COM',
-        Review: 'I am so impressed with the details and the planning that it felt like we have been working together for such a long time. Would strongly recommend them if you want anything to do with video.',
-        media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/9DhuWapDDrw?si=Y6vr5Qjts9gyygHZ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        Name: 'Manesh Pandey',
+        CompanyName: 'Director at Ecommerce Company',
+        Review: 'We got everything we needed from an agency including specific results, tangible benefits, positive tone and credible sources.',
+        media: <Image src={'/assets/images/person-icon.png'} alt='' fill className='object-contain rounded-lg'/>
     },
     {
-        Name: 'Ankur Chauhan',
-        CompanyName: 'NEARBUY.COM',
-        Review: 'I am so impressed with the details and the planning that it felt like we have been working together for such a long time. Would strongly recommend them if you want anything to do with video.',
-        media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/9DhuWapDDrw?si=Y6vr5Qjts9gyygHZ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+        Name: 'Rezwan Shah',
+        CompanyName: 'Owner at Herbal Company',
+        Review: 'They were very transparent about their pricing and process and made sure we were satisfied with the results.',
+        media: <Image src={'/assets/images/person-icon.png'} alt='' fill className='object-contain rounded-lg'/>
     },
 ]
 

@@ -48,7 +48,7 @@ export default function FootstepsCaseStudy() {
 
                 <div className='md:px-[10%]'>
                     <div className='bg-secondaryBGColor h-full w-full flex flex-col lg:flex-row overflow-hidden rounded-lg'>
-                        <div className='bg-blue-500 w-full lg:w-[40%] h-[300px] md:h-[500px] lg:order-2'></div>
+                        <div className='bg-blue-500 w-full lg:w-[40%] h-[300px] md:h-[500px] lg:order-2 relative'><Image src={'/assets/case studies/footsteps objective.png'} alt='' fill className='object-cover'/></div>
                         <div className='py-5 my-auto lg:w-[60%]'>
                             <h3 className='text-3xl font-bold tracking-widest mb-2 pl-5'>OBJECTIVE :</h3>
                             <p className='text-textColor md:text-lg pl-5 mb-8 pr-5 lg:pr-0'>If a person wants an Amazon DSP, they have specific rules and regulations an individual needs to adhere to. Understanding their main goal, our team accurately initiated work, ensuring we cater to all their necessary and unique requirements. The main goals were:</p>
@@ -63,7 +63,7 @@ export default function FootstepsCaseStudy() {
 
                 <div className='md:px-[10%]'>
                     <div className='bg-secondaryBGColor h-full w-full flex flex-col lg:flex-row overflow-hidden rounded-lg'>
-                        <div className='bg-green-500 w-full lg:w-[40%] h-[300px] md:h-[500px]'></div>
+                        <div className='bg-green-500 w-full lg:w-[40%] h-[300px] md:h-[500px] relative'><Image src={'/assets/case studies/footsteps challenge.png'} alt='' fill className='object-cover'/></div>
                         <div className='py-5 my-auto lg:w-[60%]'>
                             <h3 className='text-3xl font-bold tracking-widest mb-2 pl-5'>CHALLENGE :</h3>
                             <p className='text-textColor md:text-lg pl-5 mb-8 mr-5 lg:pr-0'>Initially we had to work with a challenging timeline to work in and swift actions to meet the client’s demand:</p>

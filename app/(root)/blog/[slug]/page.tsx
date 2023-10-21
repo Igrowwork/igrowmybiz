@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-export async function generateMetadata({ params }: { params: { slug: string } }, parent:any) {
+export async function generateMetadata({ params }: { params: { slug: string } }, parent: any) {
     const finalBlog = await blogsData.filter((blog) => blog.slug === params.slug)
 
     return {
@@ -52,9 +52,6 @@ export default function Page({ params }: { params: { slug: string } }) {
                         </div>
                     </div></Link>)}
                 </section></>}
-            <section className='w-[90%]'>
-
-            </section>
         </main>
     )
 }

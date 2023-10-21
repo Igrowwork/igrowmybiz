@@ -13,6 +13,10 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { useForm } from "react-hook-form"
+import { useState } from "react"
+import axios from "axios"
+import { toast } from "@/components/ui/use-toast"
+import { Loader2 } from "lucide-react"
 
 const formSchema = z.object({
     name: z.string().min(2, {
@@ -27,6 +31,9 @@ const formSchema = z.object({
 })
 
 export function BlogForm() {
+    const [Loading, setLoading] = useState<boolean>(false)
+    const [services, setServices] = useState<any>()
+    const [submit, setSubmit] = useState<boolean>(false)
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -37,9 +44,35 @@ export function BlogForm() {
         },
     })
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
+    async function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values)
+        try {
+            setLoading(true)
+            const response = await axios.post('/api/blogsubscription', values)
+            toast({
+                title: response.data,
+            })
+            setLoading(false);
+            form.reset()
+            toast({
+                title: 'Subscribed Successfully 👍👍'
+            })
+            setSubmit(true)
+        } catch (error) {
+            toast({
+                title: 'Something went wrong',
+                variant: 'destructive',
+            })
+            setLoading(false);
+        }
         form.reset()
+    }
+    if (submit) {
+        return (
+            <div className="w-full h-full border-2 rounded-lg flex items-center justify-center">
+                <p className="text-white font-semibold">You have subscribed to our blog 🎉🎉</p>
+            </div>
+        )
     }
 
     return (
@@ -82,7 +115,8 @@ export function BlogForm() {
                     )}
                 />
                 <div className="flex justify-center">
-                    <Button type="submit" className='px-10 py-5 text-lg text-black sm:text-base lg:text-xl rounded-full bg-white w-fit border-2 border-white font-semibold hover:bg-black hover:text-white transition-all duration-500'>
+                    <Button disabled={Loading} type="submit" className='px-10 py-5 text-lg text-black sm:text-base lg:text-xl rounded-full bg-white w-fit border-2 border-white font-semibold hover:bg-black hover:text-white transition-all duration-500'>
+                        {Loading && <Loader2 className="text-white mr-2 h-4 w-4 animate-spin" />}
                         Subscribe Now
                     </Button>
                 </div>
