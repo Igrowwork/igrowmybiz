@@ -18,8 +18,6 @@ export default function Footer() {
                     <a href="tel:+9162647 55339" className='bg-textColor hover:bg-white hover:scale-110 transition-all ease-linear duration-300 group/socials p-1 rounded-md cursor-pointer flex gap-3'>
                         <PhoneCall className='text-[#141414]' /> +91 62647 55339
                     </a>
-                </div>
-                <div className='flex gap-2'>
                     <a href='https://in.linkedin.com/company/igrowmybiz' target='_blank' className='bg-textColor hover:bg-white hover:scale-110 transition-all ease-linear duration-300 group/socials p-1 rounded-md cursor-pointer'>
                         <Linkedin className='text-[#141414]' />
                     </a>

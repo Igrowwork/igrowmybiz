@@ -28,7 +28,7 @@ export default function Page({ searchParams }: { searchParams: { category: strin
     }
     return (
         <main className='min-h-screen w-full bg-secondaryColor py-24 flex flex-col gap-10'>
-            <h1 className='text-center text-white font-bold text-5xl'>Our Blogs</h1>
+            <h1 className='text-center text-white font-bold text-5xl'>{searchParams.category} Blogs</h1>
             <section className='grid grid-cols-6 gap-10 w-4/5 mx-auto justify-items-center'>
                 {finalBlogs.map((blog) => <Link key={blog.id} href={`/blog/${blog.slug}`} className='md:col-span-3 xl:col-span-2 col-span-6'><div className="card relative group/card">
                     <Image src={`/assets/blogs-images/${blog.data.heroImge}`} alt='Image' fill className='object-cover' />
