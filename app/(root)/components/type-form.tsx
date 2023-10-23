@@ -6,6 +6,7 @@ import { useToast } from '@/components/ui/use-toast';
 import { cn } from '@/lib/utils';
 import axios from 'axios';
 import { Check, ChevronDown, ChevronUp, Loader2 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 
 const options = [
@@ -28,12 +29,7 @@ const countries = [
   {
     value: "+1",
     label: "+1",
-    name: "United States of America",
-  },
-  {
-    value: "+1",
-    label: "+1",
-    name: "Canada",
+    name: "United States of America & Canada",
   },
   {
     value: "+971",
@@ -65,6 +61,7 @@ export default function TypeFormComponent() {
   const [Submited, setSubmited] = useState<boolean>(false)
   const [fetching, setFetching] = useState<boolean>(false)
   const { toast } = useToast()
+  const router = useRouter()
 
 
   const handleOptionToggle = (value: string) => {
@@ -88,6 +85,7 @@ export default function TypeFormComponent() {
         title: "Successfull 👍👍",
         description: response.data,
       })
+      router.push('/thankyou')
     } catch (error) {
       setFetching(false);
       toast({
@@ -163,16 +161,16 @@ export default function TypeFormComponent() {
         </div>
         <div className='flex flex-col gap-4 w-full h-full items-start justify-center pl-3'>
           <h2 className='text-white text-base md:text-xl font-medium tracking-widest'>{`What is your Company Name ?`}</h2>
-          <input placeholder='type your answer here.' value={compnayName} onChange={(e) => setcompnayName(e.target.value)} type='text' name='company' className='bg-transparent outline-none border-b-2 md:border-b-4 h-14 text-textColor font-medium text-base md:text-lg w-4/5 caret-textColor' tabIndex={-1} />
-          <div onClick={() => { compnayName.trim() !== '' && setCurrentForm(4) }} className={cn(' text-white w-fit py-2 px-3 flex items-center rounded-md select-none', !(compnayName.trim()) ? 'cursor-not-allowed bg-white/10' : 'cursor-pointer bg-secondaryColor')}>
+          <input placeholder='type your answer here.' value={compnayName} onChange={(e) => setcompnayName(e.target.value)} type='text' name='company' required={false} className='bg-transparent outline-none border-b-2 md:border-b-4 h-14 text-textColor font-medium text-base md:text-lg w-4/5 caret-textColor' tabIndex={-1} />
+          <div onClick={() => setCurrentForm(4)} className={cn(' text-white w-fit py-2 px-3 flex items-center rounded-md select-none cursor-pointer bg-secondaryColor')}>
             OK
             <Check className='ml-2 h-4 w-4' />
           </div>
         </div>
         <div className='flex flex-col gap-4 w-full h-full items-start justify-center pl-3'>
           <h2 className='text-white text-base md:text-xl font-medium tracking-widest'>{`Your Website ?`}</h2>
-          <input placeholder='type your answer here.' value={website} onChange={(e) => setwebsite(e.target.value)} type='text' name='website' className='bg-transparent outline-none border-b-2 md:border-b-4 h-14 text-textColor font-medium text-base md:text-lg w-4/5 caret-textColor' tabIndex={-1} />
-          <div onClick={() => { website.trim() !== '' && setCurrentForm(5) }} className={cn(' text-white w-fit py-2 px-3 flex items-center rounded-md select-none', !(website.trim()) ? 'cursor-not-allowed bg-white/10' : 'cursor-pointer bg-secondaryColor')}>
+          <input placeholder='type your answer here.' value={website} required={false} onChange={(e) => setwebsite(e.target.value)} type='text' name='website' className='bg-transparent outline-none border-b-2 md:border-b-4 h-14 text-textColor font-medium text-base md:text-lg w-4/5 caret-textColor' tabIndex={-1} />
+          <div onClick={() => setCurrentForm(5)} className={cn(' text-white w-fit py-2 px-3 flex items-center rounded-md select-none cursor-pointer bg-secondaryColor')}>
             OK
             <Check className='ml-2 h-4 w-4' />
           </div>

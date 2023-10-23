@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import { google } from "googleapis"
 export async function POST(request: Request) {
     const body = await request.json();
-    console.log(body);
     // Get the current timestamp using Date.now()
     const timestamp = Date.now();
 

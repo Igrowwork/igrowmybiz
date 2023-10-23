@@ -62,7 +62,7 @@ export function CareerForm() {
             })
             setLoading(false);
             form.reset()
-            // router.replace('/thankyou')
+            router.replace('/thankyou')
         } catch (error) {
             toast({
                 title: 'Something went wrong',

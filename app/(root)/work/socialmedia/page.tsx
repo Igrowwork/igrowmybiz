@@ -7,9 +7,11 @@ import Link from 'next/link'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 
 
-const images1 = ['14 nov event 1.png', 'Ab capital 17.png', 'Ab capital 25.png', 'Ab capital 26.png', 'Ab capital 27.png', 'Ab capital 29.1.png', 'Ab capital 30.1.png', 'Ad Real state 2.png', 'Ad Real state.png', 'AIM 2.png','AIM 4.png','AIM 5.png','AIM 8.png','BBB 7.png','BBB 8.png','BBB 16.png','Career Couselling 1.png','Lotus Bunglows  1.png','Lotus Bunglows  4.png'];
-const images2 = ['Lotus Bunglows  5.png','Pachmarhi ayurveda 1.png','Pachmarhi ayurveda 2.png','Pachmarhi ayurveda 3.png','Pachmarhi ayurveda 4.png','SHIM 1.png','SHIM 21.png','SHIM 26.png','SHIM 29.png','SHIM 31.png','SHIM 34.png','SHIM 41.png','SHIM 95.png','Tathya ban post 4.png','Tathya ban post 5.png','VFP 2.png','VFP 3.png','VFP 4.png','VFP 10.png','VFP 14.png']
+const images1 = ['Pachmarhi ayurveda 3.png','SHIM 29.png','Lotus Bunglows  1.png','BBB 8.png','SHIM 21.png','Pachmarhi ayurveda 2.png','SHIM 41.png','Lotus Bunglows  5.png','BBB 16.png','SHIM 26.png','Pachmarhi ayurveda 4.png','Career Couselling 1.png','Lotus Bunglows  4.png','BBB 7.png'];
+const images2 = ['VFP 4.png','Ab capital 17.png','AIM 5.png','SHIM 34.png','Tathya ban post 4.png','14 nov event 1.png','Ab capital 29.1.png','AIM 8.png','SHIM 1.png','Tathya ban post 5.png','VFP 10.png','Ab capital 26.png','AIM 2.png','SHIM 95.png']
 
+console.log(images1.length)
+console.log(images2.length)
 export default function Page() {
     return (
         <main className='w-full bg-secondaryColor min-h-screen'>
