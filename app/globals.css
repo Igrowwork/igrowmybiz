@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.btn-background {
+    background: linear-gradient(to right, #6557ff, #aa3fff 30%, #fcf74a 60%, #f8522e);
+}
+
+.float {
+    animation: float 4s ease-in-out infinite;
+}
+
 .animated-border {
     position: relative;
     font-size: 16px;
@@ -193,6 +202,7 @@
         }
     }
 }
+
 @keyframes scrollFour {
 
     0% {

@@ -1,24 +1,24 @@
 import { dancing_script } from '@/app/fonts'
 import React from 'react'
-import ServiceCard from './service-card'
 import { cn } from '@/lib/utils'
+import ServiceCard from '../../components/service-card'
 
 
 const serviceData = [
     {
         heading: 'E-commerce',
         listContent: ['Upto 100 products', 'Payment Gateway', 'Admin Dashboard', 'User Accounts', 'On Page SEO'],
-        href: '/contact'
+        href: '/service/contact/development'
     },
     {
         heading: 'Landing Page',
         listContent: ['Fast Single-page site', 'Responsive Design', 'Custom Form with DB', 'Thank You Page', 'On Page SEO'],
-        href: '/contact'
+        href: '/service/contact/development'
     },
     {
         heading: 'Company',
         listContent: ['Upto 10 pages', 'Responsive Design', 'Custom Form with DB', 'Blogs', 'On Page SEO'],
-        href: '/contact'
+        href: '/service/contact/development'
     },
 ]
 export default function SectionFive() {
@@ -30,7 +30,7 @@ export default function SectionFive() {
             </div>
             <div className='w-[80%] md:w-[70%] mx-auto lg:mx-0 plans-card'>
                 <div className='w-full flex flex-wrap lg:flex-row lg:flex-nowrap gap-6 justify-between'>
-                    {serviceData.map((items)=><ServiceCard key={items.heading} heading={items.heading} list={items.listContent} href={items.href} />)}                    
+                    {serviceData.map((items)=><ServiceCard key={items.heading} tagline='Website' heading={items.heading} list={items.listContent} href={items.href} />)}                    
                 </div>
             </div>
         </section>

@@ -18,7 +18,7 @@ export default function DevelopmentSectionOne() {
                     </p>
                 </div>
                 <div className='p-[2px] w-fit h-fit rounded-full float btn-background'>
-                    <Link href={'/contact'}>
+                    <Link href={'/service/contact/socialmedia'}>
                         <Button className='px-7 py-6 rounded-full bg-black select-none'>
                             Get your free audit now
                         </Button>

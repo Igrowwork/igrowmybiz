@@ -9,14 +9,14 @@ import DevelopmentSectionFour from './components/development-section-four'
 import DevelopmentSectionSix from './components/development-section-six'
 import DevelopmentSectionSeven from './components/development-section-seven'
 import DevelopmentSectionEight from './components/development-section-eight'
-import NavBar from './components/nav-bar'
+import SocialNavBar from './components/service-nav-bar'
 
 
 export default function Page() {
     return (
         <>
             <header>
-                <NavBar />
+                <SocialNavBar />
             </header>
             <main className=''>
                 <DevelopmentSectionOne />
