@@ -26,7 +26,7 @@ export default function Home() {
             <h2 className={cn(oxygen.className, 'text-white text-2xl md:text-xl lg:text-[32px] font-bold leading-8 lg:leading-[2.7rem]')}>
               IgrowMyBiz - <span className='md:text-textColor text-white/50'>the one stop solution for you business needs</span>
             </h2>
-            <Link href="/services" className='px-4 py-2 text-sm rounded-full bg-white w-fit border-2 border-white font-semibold hover:bg-black hover:text-white transition-all duration-500'>
+            <Link href="/services" className='px-4 py-2 text-sm rounded-full text-white bg-black w-fit border-2 border-white font-semibold hover:bg-white hover:text-black transition-all duration-500'>
               Our Services
             </Link>
           </div>
