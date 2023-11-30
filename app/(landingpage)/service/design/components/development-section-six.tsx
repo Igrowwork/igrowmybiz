@@ -1,4 +1,4 @@
-import { dancing_script } from '@/app/fonts'
+import { cutive } from '@/app/fonts'
 import { Card, CardHeader } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 import React from 'react'
@@ -32,7 +32,7 @@ export default function DevelopmentSectionSix() {
     return (
         <section className='bg-[#242424] py-10'>
             <div className='w-[80%] lg:w-[70%] mx-auto flex flex-col items-center gap-6 lg:gap-6 mb-6'>
-                <h2 className='text-white text-center flex flex-col text-4xl font-bold'><span className={cn(dancing_script.className, 'text-mainColor font-semibold text-xl sm:text-lg md:text-xl ')}>True Stories</span><span>Our <span className='text-mainColor'>Works</span></span></h2>
+                <h2 className='text-white text-center flex flex-col gap-2 text-4xl font-bold'><span className={cn(cutive.className, 'text-mainColor font-semibold text-xl sm:text-lg md:text-xl ')}>True Stories</span><span>Our Works</span></h2>
                 <div className="h-[3px] lg:w-[30%] w-[80%] divider rounded-none"></div>
             </div>
             <div className='w-[80%] md:w-[70%] mx-auto overflow-x-hidden'>

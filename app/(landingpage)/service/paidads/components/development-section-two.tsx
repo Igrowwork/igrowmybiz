@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { dancing_script } from '@/app/fonts'
+import { cutive } from '@/app/fonts'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { CheckCircle2 } from 'lucide-react'
@@ -8,13 +8,13 @@ import React from 'react'
 
 export default function DevelopmentSectionTwo() {
     return (
-        <section className='bg-black h-fit pt-10'>
+        <section className='bg-black h-fit pt-8'>
             <div className='lg:flex lg:flex-row-reverse lg:w-4/5 mx-auto items-center'>
                 <div className='w-[80%] lg:w-1/2 mx-auto float lg:ml-20 flex items-center justify-center'>
                     <img src="/assets/images/paid ad management_paid ad management.png" alt="media" className='lg:h-96' />
                 </div>
                 <div className='w-[90%] lg:w-1/2 mx-auto flex flex-col gap-6 lg:gap-6 py-10'>
-                    <h2 className='text-white text-center flex flex-col text-4xl font-bold lg:items-start'><span className={cn(dancing_script.className, 'text-mainColor font-semibold text-xl sm:text-lg md:text-xl ')}>What</span><span>We <span className='text-mainColor'>Offer</span></span></h2>
+                    <h2 className='text-white text-center flex flex-col gap-2 text-4xl font-bold lg:items-start'><span className={cn(cutive.className, 'text-mainColor font-semibold text-xl sm:text-lg md:text-xl ')}>What</span><span>We Offer</span></h2>
                     <p className='text-gray-400 text-center lg:text-left text-sm sm:text-base md:text-lg'>We execute a wide range of campaigns to archive your objectives</p>
                     <div className='flex text-gray-400 justify-between sm:justify-evenly lg:justify-start lg:gap-20 items-start text-sm sm:text-base md:text-lg'>
                         <ul className='flex flex-col gap-4'>

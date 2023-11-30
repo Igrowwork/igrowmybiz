@@ -28,7 +28,7 @@ export default function Page() {
                                 `}
                             </span>
                         </p>
-                        <Link href="/services" className='px-4 py-2 text-sm rounded-full bg-white w-fit border-2 border-white font-semibold hover:bg-black hover:text-white transition-all duration-500'>
+                        <Link href="/service/socialmediamarketing" className='px-4 py-2 text-sm rounded-full bg-white w-fit border-2 border-white font-semibold hover:bg-black hover:text-white transition-all duration-500'>
                             Our Services
                         </Link>
                     </div>
