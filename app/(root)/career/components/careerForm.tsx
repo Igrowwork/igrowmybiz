@@ -122,10 +122,14 @@ export function CareerForm() {
                                         <SelectValue placeholder="Select Job Profile" />
                                     </SelectTrigger>
                                 </FormControl>
-                                <SelectContent>
-                                    <SelectItem className="text-textColor text-lg" value="Content Writer">Content Writer</SelectItem>
-                                    <SelectItem className="text-textColor text-lg" value="Graphic Designer">Graphic Designer</SelectItem>
-                                    <SelectItem className="text-textColor text-lg" value="Account Manager">Account Manager</SelectItem>
+                                <SelectContent className="text-base text-gray-600 font-medium">
+                                    <SelectItem value="Content Writer">Content Writer</SelectItem>
+                                    <SelectItem value="Graphic Designer">Graphic Designer</SelectItem>
+                                    <SelectItem value="Account Manager">Account Manager</SelectItem>
+                                    <SelectItem value="Business Development">Business Development</SelectItem>
+                                    <SelectItem value="Performance Marketer">Performance Marketer</SelectItem>
+                                    <SelectItem value="Internship">Internship</SelectItem>
+                                    <SelectItem value="Other">Other</SelectItem>
                                 </SelectContent>
                             </Select>
                             <FormMessage />

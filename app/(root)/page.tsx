@@ -26,7 +26,7 @@ export default function Home() {
             <h2 className={cn(oxygen.className, 'text-white text-3xl md:text-3xl lg:text-4xl xl:text-7xl font-bold leading-8 lg:leading-[2.7rem] flex flex-col gap-2 sm:gap-4')}>
               IgrowMyBiz - <span className='text-xl md:text-3xl lg:text-4xl xl:text-5xl'>Building Brands From Biz <span className='inline-block relative top-[12%] h-6 w-6 sm:h-8 sm:w-8 lg:h-12 lg:w-12'><Image src={'/assets/images/star.png'} alt='' fill className='object-cover' /></span></span>
             </h2>
-            <Link href="/contact" className='px-8 py-3 rounded-md text-sm text-black bg-mainColor w-fit font-semibold transition-all duration-500'>
+            <Link href="/services" className='px-8 py-3 rounded-md text-sm text-black bg-mainColor w-fit font-semibold transition-all duration-500'>
               Our Services
             </Link>
           </div>
@@ -61,7 +61,7 @@ export default function Home() {
                 <h2 className='text-white font-semibold text-center text-3xl lg:text-5xl'>What do we do?</h2>
                 <p className='text-textColor text-center text-sm sm:w-3/4 lg:w-[60%]'>Our main aim is to focus on business development, content marketing, social media marketing, meme marketing, SEOs, Paid ads (google & meta), Website Development, Ad Production, PR strategies.</p>
               </div>
-              <div className='bg-black rounded-xl flex flex-col md:grid grid-cols-3 gap-4 p-2 lg:p-4'>
+              <div className='flex flex-col md:grid grid-cols-3 gap-4 p-2 lg:p-4'>
                 <div className='text-white p-2 sm:p-0 sm:pr-8 flex flex-col items-center justify-center sm:border-r-2 border-[#FCF74A]'>
                   <p className='text-center'>
                     <Countdown1 initialCount={100} timeDuration={50} symbol='+' />
@@ -94,7 +94,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className='bg-secondaryBGColor py-14 sm:py-20 flex items-center justify-center'>
+        <section className='py-14 sm:py-20 flex items-center justify-center'>
           <Testimonials />
         </section>
         <HomeService />
