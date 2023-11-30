@@ -1,4 +1,4 @@
-import { dancing_script } from '@/app/fonts'
+import { cutive } from '@/app/fonts'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
@@ -11,7 +11,7 @@ export default function DevelopmentSectionThree() {
     return (
         <section className='pt-10 bg-black'>
             <div className='w-[80%] lg:w-[70%] mx-auto flex flex-col items-center gap-6 lg:gap-6'>
-                <h2 className='text-white text-center flex flex-col text-4xl font-bold'><span className={cn(dancing_script.className, 'text-mainColor font-semibold text-xl sm:text-lg md:text-xl ')}>Why choose us</span><span>Our <span className='text-mainColor'>Speciality</span></span></h2>
+                <h2 className='text-white text-center flex flex-col gap-2 text-4xl font-bold'><span className={cn(cutive.className, 'text-mainColor font-semibold text-xl sm:text-lg md:text-xl ')}>Why choose us</span><span>Our Speciality</span></h2>
                 <div className="h-[3px] lg:w-[30%] w-[80%] divider rounded-none"></div>
                 <div className=' mx-auto'>
                     <div className='grid lg:grid lg:grid-cols-4 grid-cols-1 grid-rows-2 gap-4 w-full md:flex justify-center flex-wrap'>

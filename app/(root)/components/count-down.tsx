@@ -62,7 +62,7 @@ const Countdown1 = ({ initialCount, timeDuration, symbol } : Props) => {
   return (
     <div
       ref={countdownRef}
-      className="text-4xl font-semibold text-green-500 md:text-3xl"
+      className="text-4xl font-semibold text-mainColor md:text-3xl"
     >
       {count}{symbol}
     </div>

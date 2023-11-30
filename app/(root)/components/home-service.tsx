@@ -35,7 +35,7 @@ export default function HomeService() {
     ]
 
     return (
-        <section className='w-full py-[5%] md:py-[3%] px-10 grid lg:grid-cols-4 gap-5 md:gap-10 bg-white'>
+        <section className='w-full py-[5%] md:py-[3%] px-10 grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10 bg-secondaryColor'>
             {/* {data.map((data, index) => <div key={index} className='h-[400px] md:h-full w-full md:hover:w-[200%] transition-all ease-linear duration-200 relative group/animatedService'>
                 <Image src={data.bgImagePath} alt='BG Image' fill className='object-cover' />
                 <Link href={data.href} className='absolute bottom-0 h-[25%] group-hover/animatedService:h-full transition-all ease-in-out duration-300 bg-opacity-20 backdrop-blur bg-white z-10 w-full'>
@@ -49,15 +49,17 @@ export default function HomeService() {
                 </Link>
             </div>
             )} */}
-            {data.map((data, index) => <div key={index} className='h-[550px] overflow-hidden bg-black relative group/card rounded-xl'>
-                <div className='relative lg:h-[400px]'>
-                    <Image src={data.bgImagePath} alt='' fill className='object-contain' />
+            {data.map((data, index) => <div key={index} className='service-card-1'>
+                <div className='h-[550px] overflow-hidden bg-black relative group/card rounded-xl service-card-2'>
+                    <div className='relative h-[400px]'>
+                        <Image src={data.bgImagePath} alt='' fill className='object-cover' />
+                    </div>
+                    <Link href={data.href} className='px-[5%] flex flex-col gap-5 items-center justify-center transition-all duration-500 ease-out h-fit w-full absolute top-[75%] left-0 group-hover/card:top-0 group-hover/card:h-full group-hover/card:backdrop-blur-md'>
+                        <h2 className={cn(black_han_sans.className, 'text-white text-3xl text-center')}>{data.heading}</h2>
+                        <p className='hidden group-hover/card:block text-textColor text-center transition-all duration-300 delay-300 ease-linear'>{data.para}</p>
+                        <ChevronRight className='bg-white h-8 w-8 p-1 rounded-full' />
+                    </Link>
                 </div>
-                <Link href={data.href} className='px-[5%] flex flex-col gap-5 items-center justify-center transition-all duration-500 ease-out h-fit w-full absolute top-[75%] left-0 group-hover/card:top-0 group-hover/card:h-full group-hover/card:backdrop-blur-md'>
-                    <h2 className={cn(black_han_sans.className, 'text-white text-3xl text-center')}>{data.heading}</h2>
-                    <p className='hidden group-hover/card:block text-textColor text-center transition-all duration-300 delay-300 ease-linear'>{data.para}</p>
-                    <ChevronRight className='bg-white h-8 w-8 p-1 rounded-full' />
-                </Link>
             </div>)}
         </section>
     )
