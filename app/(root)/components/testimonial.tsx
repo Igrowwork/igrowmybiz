@@ -6,16 +6,16 @@ import React, { useState } from 'react'
 
 const TestimonialsContent = [
     {
-        Name: 'Mayank Shergill',
-        CompanyName: 'bigbullboy.com',
-        Review: "Team igrow my biz stand with me when i was nothing in industry right now i am having more portfolies in cr's and the main reason behind is their marketing and creativity for optimized my social media.",
-        media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/wvxYQwPdZ5E?si=Lu5MGcXNcmfeANs3" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-    },
-    {
         Name: 'Vanya',
         CompanyName: 'The Geeky Yougin',
         Review: 'I am so impressed with the details and the planning that it felt like we have been working together for such a long time. Would strongly recommend them if you want anything to do with video.',
         media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/Mn6NRhWTViw?si=F6UrWm4i3Rm5VKF_" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+    },
+    {
+        Name: 'Mayank Shergill',
+        CompanyName: 'bigbullboy.com',
+        Review: "Team igrow my biz stand with me when i was nothing in industry right now i am having more portfolies in cr's and the main reason behind is their marketing and creativity for optimized my social media.",
+        media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/wvxYQwPdZ5E?si=Lu5MGcXNcmfeANs3" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
     },
     {
         Name: 'Dr. Pushpendra Tiwari',
