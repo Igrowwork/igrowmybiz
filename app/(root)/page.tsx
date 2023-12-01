@@ -32,10 +32,12 @@ export default function Home() {
           </div>
           <div className='w-full h-full absolute z-20 bg-black md:hidden opacity-70' />
           <div className='w-full md:w-[40%] h-full absolute top-0 left-0 md:left-[95%] z-10 md:-translate-x-full '>
-            <div className='h-full w-full md:h-[90%] relative rounded-md md:px-6 overflow-hidden'>
-              <Slider />
-              <div className='absolute top-0 left-0 -z-10 h-[455px] w-[455px] rounded-full home-slider-bg' />
-              <div className='absolute top-1/2 left-1/3 -z-10 h-[455px] w-[455px] rounded-full home-slider-bg' />
+            <div className='h-full w-full flex items-end'>
+              <div className='h-full w-full md:h-[90%] relative rounded-md md:px-6 overflow-hidden'>
+                <Slider />
+                <div className='absolute top-0 left-0 -z-10 h-[455px] w-[455px] rounded-full home-slider-bg' />
+                <div className='absolute top-1/2 left-1/3 -z-10 h-[455px] w-[455px] rounded-full home-slider-bg' />
+              </div>
             </div>
           </div>
         </section>

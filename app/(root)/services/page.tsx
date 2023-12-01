@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 }
 export default function Page() {
   return (
-    <main className='w-full bg-secondaryColor flex flex-col gap-20'>
+    <main className='w-full bg-secondaryColor flex flex-col gap-10 md:gap-20 pt-10'>
       <section className='pt-24 flex flex-col gap-2 items-center px-5'>
         <h2 className={cn('text-3xl text-white font-semibold', oxygen.className)}>Our Services</h2>
         <p className={cn('text-[#8e8e8e] md:w-1/2 mx-auto text-center', oxygen.className)}>{`Explore the possibilities with iGrowMyBiz We turn your ideas into reality, delivering solutions tailored to your needs. Let's bring your vision to life together.`}</p>

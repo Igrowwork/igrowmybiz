@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className='bg-secondaryColor '>
+    <main className='bg-secondaryColor pt-20'>
       <section className='py-10 flex flex-col gap-6'>
         <div className='w-4/5 h-24 md:h-52 mx-auto rounded-2xl relative'><Image src={'/assets/Hoem pages images/Cover page.png'} alt='cover bg' fill className='object-cover rounded-2xl' /></div>
         <div className='w-4/5 mx-auto flex flex-col gap-4'>
