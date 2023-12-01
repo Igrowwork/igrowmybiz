@@ -37,6 +37,11 @@ const TeamCardComponent = [
     expertise: 'Expertise-Marketing Strategies, Social Media & Google Ads, Email & WhatsApp Automation.'
   },
   {
+    image: 'chanchal.jpg',
+    position: 'UI/UX Designer',
+    expertise: 'Expert in - Research, Prototyping, Wireframing, Layout Design, Visual Design and Figma Tools'
+  },
+  {
     image: 'kamran.png',
     position: 'Front-End Developer',
     expertise: 'ReactJs, NextJs, TailwindCSS, WordPress, Responsive Design, GitHub, JavaScript/TypeScript'

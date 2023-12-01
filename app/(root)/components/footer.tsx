@@ -40,7 +40,7 @@ export default function Footer() {
                 </div>
                 <div className='flex flex-col gap-5 md:gap-10 h-full md:w-[31%]'>
                     <div className='flex flex-col gap-6 items-center md:items-end text-white w-full mx-auto'>
-                        <div className='flex flex-col items-center md:items-start gap-6 h-fit w-fit'>
+                        <div className='flex flex-col items-start gap-6 h-fit w-fit'>
                             <a className='flex items-center gap-2 hover:text-[#FCF74A] hover:scale-105 transition-all duration-300 ease-linear group/footerIcon' href="tel:+9162647 55339"><PhoneCall className='h-8 w-8 bg-white group-hover/footerIcon:bg-[#FCF74A] text-[#141414] px-[6px] rounded-full' />+9162647 55339</a>
                             <a className='flex items-center gap-2 hover:text-[#FCF74A] hover:scale-105 transition-all duration-300 ease-linear group/footerIcon' href="mailto:igrowmybiz@gmail.com"><Mail className='h-8 w-8 bg-white group-hover/footerIcon:bg-[#FCF74A] text-[#141414] px-[6px] rounded-full' />igrowmybiz@gmail.com</a>
                         </div>
