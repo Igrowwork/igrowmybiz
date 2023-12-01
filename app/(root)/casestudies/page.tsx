@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className='w-full bg-[#141414] pb-10'>
+    <main className='w-full bg-[#141414] py-10'>
       <section className='pt-24 flex flex-col gap-2 items-center px-5'>
         <h2 className={cn('text-3xl md:text-4xl text-white font-semibold border-b border-[#8e8e8e] px-10 md:px-40 pb-5', oxygen.className)}>Case Studies</h2>
       </section>

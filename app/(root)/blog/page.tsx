@@ -27,7 +27,7 @@ export default function Page({ searchParams }: { searchParams: { category: strin
 
     ]
     return (
-        <main className='min-h-screen w-full bg-secondaryColor py-24 flex flex-col gap-10'>
+        <main className='min-h-screen w-full bg-secondaryColor py-28 flex flex-col gap-10'>
             <h1 className='text-center text-white font-bold text-5xl flex flex-col gap-2'>Our Blogs <span className='text-center text-white font-normal text-base'>search by categories</span></h1>
 
             <section className='grid grid-cols-6 gap-10 w-4/5 mx-auto justify-items-center'>
