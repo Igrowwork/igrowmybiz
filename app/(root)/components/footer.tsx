@@ -31,7 +31,7 @@ export default function Footer() {
             </div> */}
             <div className='flex flex-col md:flex-row items-center gap-12 sm:gap-4 h-full w-full pt-20 max-w-7xl mx-auto mb-5'>
                 <div className='flex flex-col items-center sm:items-start gap-6 xl:gap-10 md:w-[69%]'>
-                    <h2 className='flex gap-2 items-center text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-semibold text-white md:-mt-5'>Building Brands From Biz <span className='relative h-6 w-6 sm:h-8 sm:w-8 lg:h-12 lg:w-12'><Image src={'/assets/images/star.png'} alt='' fill className='object-cover' /></span></h2>
+                    <h2 className='items-center text-2xl md:text-3xl lg:text-4xl xl:text-6xl font-semibold text-white md:-mt-5'>Building Brands From Biz <span className='inline-block relative h-6 w-6 sm:h-8 sm:w-8 lg:h-12 lg:w-12'><Image src={'/assets/images/star.png'} alt='' fill className='object-cover' /></span></h2>
                     <Link href={'/'}>
                         <div className='relative h-6 w-[250px] md:-ml-5 hover:scale-125 transition-all ease-in-out duration-500'>
                             <Image src={"/assets/images/new logo-a4aa82bd.png"} alt='' fill className='object-contain' />
