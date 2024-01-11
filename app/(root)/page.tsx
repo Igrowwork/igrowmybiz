@@ -8,6 +8,7 @@ import { AspectRatio } from '@/components/ui/aspect-ratio'
 import Slider from './components/slider'
 import Countdown1 from './components/count-down'
 import { Metadata } from 'next'
+import CountDownKammo from '@/components/flip count-down/count-down'
 
 
 export const metadata: Metadata = {
@@ -96,6 +97,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* <section className='flex flex-col gap-5 items-center justify-center pb-20 pt-10'>
+          <h2 className='text-mainColor font-semibold text-2xl text-center'>Hurry up! get your free consultation now!</h2>
+          <CountDownKammo/>
+        </section> */}
         <section className='py-14 sm:py-20 flex items-center justify-center'>
           <Testimonials />
         </section>
