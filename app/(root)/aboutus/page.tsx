@@ -7,7 +7,7 @@ import { Metadata } from 'next'
 
 const TeamCardComponent = [
   {
-    image: 'anshita-shukla.jpeg',
+    image: 'kalash.jpg',
     position: 'Content Head',
     expertise: 'Creative Writing, Copy Writing, Story Telling, SEO Writing'
   },
@@ -107,7 +107,7 @@ export default function Page() {
             <p className='text-textColor text-center lg:text-lg'>Meet one the most talented minds in our office.</p>
           </div>
           <div className='flex flex-col gap-5 md:flex-row'>
-            <FoundersCards image='adarsh_jatav_close.png' info="Aadarsh from Pachmarhi kept pursuing his passion for tech and content, which began during his exploration of digital marketing in the 11th grade. After several years of freelancing and numerous cold calls and emails, he found his specialization in building effective digital marketing strategies through content. Aadarsh founded Igrow with Sarfaraz, realizing that their expertise in content could significantly benefit brands in the realm of organic marketing" insta='https://www.instagram.com/thisisaadarshh/' linkedin='https://www.linkedin.com/in/aadarsh-kumar-3b44a1170/' name='Aadarsh Kumar' mail='aadarsh@igrowmybiz.com' />
+            <FoundersCards image='adarsh_jatav_close.png' info="Aadarsh from Pachmarhi kept pursuing his passion for tech and content, which began during his exploration of digital marketing in the 11th grade. After several years of freelancing and numerous cold calls and emails, he found his specialization in building effective digital marketing strategies through content. Aadarsh founded Igrow with Sarfaraz, realizing that their expertise in content could significantly benefit brands in the realm of organic marketing" insta='' linkedin='https://www.linkedin.com/in/aadarsh-kumar-3b44a1170/' name='Aadarsh Kumar' mail='aadarsh@igrowmybiz.com' />
             <FoundersCards image='sarfaraz_photo.jpg' info="I'm Sarfaraz Ajm Abadi, co-founder of our IGROW MY BIZ. With an electrical engineering background and over three years in organic social media marketing, brand building, and business growth expert, I bring a unique blend of technical expertise and marketing prowess. My passion lies in crafting innovative strategies to enhance brand visibility and drive sustainable growth. I'm dedicated to staying ahead of industry trends to propel our venture forward. Together with our talented team, we're shaping a brand that resonates, one connection at a time, Join us, and let's create success together!" insta='https://www.instagram.com/digitalabadii/' linkedin='https://www.linkedin.com/in/sarfaraz-ajm-abadi-8636231b4/ ' name='Sarfaraz Ajm Abadi' mail='sarfaraz@igrowmybiz.com' />
           </div>
         </div>
