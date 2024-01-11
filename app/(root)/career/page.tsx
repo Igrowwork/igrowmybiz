@@ -47,11 +47,11 @@ export default function Page() {
                 <Mail className='h-6 w-6' />
                 career@igrowmybiz.com
               </a>
-              <a href="#" className='flex items-center gap-5 text-textColor bg-secondaryBGColor px-10 py-3 rounded-full hover:scale-105 hover:text-white transition-all duration-300'>
+              <a href="https://in.linkedin.com/company/igrowmybiz" className='flex items-center gap-5 text-textColor bg-secondaryBGColor px-10 py-3 rounded-full hover:scale-105 hover:text-white transition-all duration-300'>
                 <Linkedin className='h-6 w-6' />
                 LinkedIn
               </a>
-              <a href="#" className='flex items-center gap-5 text-textColor bg-secondaryBGColor px-10 py-3 rounded-full hover:scale-105 hover:text-white transition-all duration-300'>
+              <a href="" className='flex items-center gap-5 text-textColor bg-secondaryBGColor px-10 py-3 rounded-full hover:scale-105 hover:text-white transition-all duration-300'>
                 <FileText className='h-6 w-6' />
                 Fill the given form
               </a>

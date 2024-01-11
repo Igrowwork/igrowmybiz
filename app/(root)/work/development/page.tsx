@@ -2,10 +2,11 @@
 import React from 'react'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
-import { dancing_script } from '@/app/fonts'
+import { cutive } from '@/app/fonts'
 import Link from 'next/link'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
+import { Button } from '@/components/ui/button'
 
 
 const images1 = [
@@ -49,13 +50,13 @@ const images2 = [
 ]
 export default function Page() {
     return (
-        <main className='w-full bg-secondaryColor min-h-screen'>
+        <main className='w-full bg-secondaryColor min-h-screen pt-20'>
             <section className='pt-5 flex flex-col gap-20 items-center'>
                 <div className='relative h-96 w-10/12 rounded-xl overflow-hidden'>
                     <div className='bg-black bg-opacity-20 sm:bg-opacity-30 absolute top-0 left-0 h-full w-full z-10'></div>
                     <Image src={"/assets/images/career.jpg"} alt='BG-Image' fill className='object-cover' />
                     <div className='flex flex-col gap-10 justify-center items-center px-5 sm:px-0 mb-10 z-10 relative h-full bg-black/50'>
-                        <h2 className='text-white text-3xl font-bold text-center flex flex-col'>IgrowMyBiz <span className={cn(dancing_script.className, 'text-mainColor -mt-4')}>Website Development Works</span></h2>
+                        <h2 className='text-white text-3xl font-bold text-center flex flex-col gap-2'>IgrowMyBiz <span className={cn(cutive.className, 'text-mainColor')}>Website Development Works</span></h2>
                         <p className='text-white text-center flex flex-col font-semibold gap-3 md:text-xl'>
                             Igrow Social is a digital marketing agency, that’s beyond social.
                             <span className='text-white/70 font-normal text-sm md:text-base'>

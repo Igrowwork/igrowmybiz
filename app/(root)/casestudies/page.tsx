@@ -1,4 +1,5 @@
 import { oxygen } from '@/app/fonts'
+import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { Metadata } from 'next'
 import Image from 'next/image'
@@ -55,20 +56,24 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className='w-full bg-[#141414] pb-10'>
+    <main className='w-full bg-[#141414] py-10'>
       <section className='pt-24 flex flex-col gap-2 items-center px-5'>
         <h2 className={cn('text-3xl md:text-4xl text-white font-semibold border-b border-[#8e8e8e] px-10 md:px-40 pb-5', oxygen.className)}>Case Studies</h2>
       </section>
 
-      <section className='px-5 sm:px-[15%] md:px-5 lg:px-[15%] my-10 flex flex-col gap-10'>
+      <section className='px-5 sm:px-[15%] md:px-5 lg:px-[15%] my-10 grid gap-10'>
 
         {cardData.map((data, index) => <div key={index} className='group/animatedIcon flex flex-col md:flex-row w-fit md:px-0 md:pl-[3%] bg-[#242424] rounded-lg border-none hover:border-solid border-[#8e8e8e] hover:border-2 hover:scale-105 transition-all duration-300 ease-in-out'>
           <div className='md:w-1/2 flex flex-col gap-5 md:gap-10 py-5 md:py-16 px-5 sm:px-10 order-2 md:order-1 md:pr-14'>
             <h3 className='text-white text-2xl font-semibold'>{data.head}</h3>
             <p className='text-[#8e8e8e] text-sm'>{data.para}</p>
-            <Link href={data.href} className='px-5 py-2 text-sm sm:text-base rounded-full bg-white w-fit border-2 border-white font-semibold hover:bg-black hover:text-white transition-all duration-500'>
-              Read More
-            </Link>
+            <div className='p-[2px] w-fit h-fit rounded-full btn-background float'>
+              <Link href={data.href}>
+                <Button className='rounded-full hover:bg-white bg-[#bbbbbb] text-black font-semibold'>
+                  Read More
+                </Button>
+              </Link>
+            </div>
           </div>
           <div className='md:w-1/2 relative md:order-2'>
             <div className='relative h-[220px] w-full md:h-full z-10'>

@@ -6,16 +6,16 @@ import React, { useState } from 'react'
 
 const TestimonialsContent = [
     {
-        Name: 'Mayank Shergill',
-        CompanyName: 'bigbullboy.com',
-        Review: "Team igrow my biz stand with me when i was nothing in industry right now i am having more portfolies in cr's and the main reason behind is their marketing and creativity for optimized my social media.",
-        media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/wvxYQwPdZ5E?si=Lu5MGcXNcmfeANs3" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-    },
-    {
         Name: 'Vanya',
         CompanyName: 'The Geeky Yougin',
         Review: 'I am so impressed with the details and the planning that it felt like we have been working together for such a long time. Would strongly recommend them if you want anything to do with video.',
         media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/Mn6NRhWTViw?si=F6UrWm4i3Rm5VKF_" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+    },
+    {
+        Name: 'Mayank Shergill',
+        CompanyName: 'bigbullboy.com',
+        Review: "Team igrow my biz stand with me when i was nothing in industry right now i am having more portfolies in cr's and the main reason behind is their marketing and creativity for optimized my social media.",
+        media: <iframe className='object-cover w-full h-full rounded-lg' src="https://www.youtube.com/embed/wvxYQwPdZ5E?si=Lu5MGcXNcmfeANs3" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
     },
     {
         Name: 'Dr. Pushpendra Tiwari',
@@ -66,14 +66,14 @@ export default function Testimonials() {
 
 
     return (
-        <div className='w-4/5 relative'>
+        <div className='w-full sm:w-4/5 relative'>
             <div className='overflow-hidden'>
                 <div className='flex gap-10 px-[1.3rem] transition-all ease-in-out duration-500' style={{ transform: `translateX(-${CurrentSlide * 100}%)` }}>
-                    {TestimonialsContent.map((item, index) => <div key={index} className='flex-shrink-0 flex-grow-0 w-full flex flex-col-reverse sm:flex-row justify-between items-center gap-10 mb-5 sm:mb-0'>
-                        <div className='sm:w-1/2 w-full flex flex-col gap-2 sm:pl-3'>
-                            <h3 className=' text-white font-bold text-2xl'>{item.Name}</h3>
-                            <p className='text-white/70 font-semibold text-lg'>{item.CompanyName}</p>
-                            <p className='text-textColor text-base'>{item.Review}</p>
+                    {TestimonialsContent.map((item, index) => <div key={index} className='flex-shrink-0 flex-grow-0 w-full flex flex-col-reverse sm:flex-row justify-between items-center gap-0 md:gap-10 mb-5 sm:mb-0'>
+                        <div className='sm:w-1/2 w-full flex flex-col gap-4 sm:pl-3 -mt-10'>
+                            <h3 className=' text-white font-bold text-2xl text-center sm:text-start'>{item.Name}</h3>
+                            <p className='text-white/70 font-semibold text-lg text-center sm:text-start'>{item.CompanyName}</p>
+                            <p className='text-textColor text-base text-center sm:text-start'>{item.Review}</p>
                         </div>
                         <div className='sm:w-1/2 w-full'>
                             <AspectRatio ratio={16 / 9}>
@@ -83,10 +83,10 @@ export default function Testimonials() {
                     </div>)}
                 </div>
             </div>
-            <div onClick={prevSlide} className='absolute cursor-pointer select-none sm:-left-10 sm:top-1/2 bg-white p-1 rounded-full'>
+            <div onClick={prevSlide} className='absolute cursor-pointer select-none left-1/3 sm:-left-10 sm:top-1/2 bg-white p-1 rounded-full'>
                 <ChevronLeft />
             </div>
-            <div onClick={nextSlide} className='absolute cursor-pointer select-none sm:-right-10 mx-14 sm:mx-0 sm:top-1/2 bg-white p-1 rounded-full'>
+            <div onClick={nextSlide} className='absolute cursor-pointer select-none right-[20%] sm:-right-10 mx-14 sm:mx-0 sm:top-1/2 bg-white p-1 rounded-full'>
                 <ChevronRight />
             </div>
         </div>

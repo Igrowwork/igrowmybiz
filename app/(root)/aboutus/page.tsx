@@ -37,6 +37,11 @@ const TeamCardComponent = [
     expertise: 'Expertise-Marketing Strategies, Social Media & Google Ads, Email & WhatsApp Automation.'
   },
   {
+    image: 'chanchal.jpg',
+    position: 'UI/UX Designer',
+    expertise: 'Expert in - Research, Prototyping, Wireframing, Layout Design, Visual Design and Figma Tools'
+  },
+  {
     image: 'kamran.png',
     position: 'Front-End Developer',
     expertise: 'ReactJs, NextJs, TailwindCSS, WordPress, Responsive Design, GitHub, JavaScript/TypeScript'
@@ -54,7 +59,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className='bg-secondaryColor '>
+    <main className='bg-secondaryColor pt-20'>
       <section className='py-10 flex flex-col gap-6'>
         <div className='w-4/5 h-24 md:h-52 mx-auto rounded-2xl relative'><Image src={'/assets/Hoem pages images/Cover page.png'} alt='cover bg' fill className='object-cover rounded-2xl' /></div>
         <div className='w-4/5 mx-auto flex flex-col gap-4'>
@@ -66,26 +71,25 @@ export default function Page() {
         </div>
       </section>
       <section className='py-10'>
-        <div className='w-4/5 bg-secondaryBGColor mx-auto rounded-2xl p-12 flex flex-col gap-4 xl:flex-row'>
-          <div className='flex flex-col gap-4 xl:w-1/2'>
-            <h2 className='text-white font-semibold text-center text-xl'>What do we do?</h2>
-            <p className='text-textColor text-center'>Our main aim is to focus on business development, content marketing, social media marketing, meme marketing, SEOs, Paid ads (google & meta), Website Development, Ad Production, PR strategies.</p>
+        <div className='sm:w-4/5 mx-auto rounded-2xl px-4 sm:px-0 py-8 sm:py-0 sm:p-12 flex flex-col gap-6 items-center'>
+          <div className='flex flex-col gap-4 items-center'>
+            <h2 className='text-white font-semibold text-center text-3xl lg:text-5xl'>What do we do?</h2>
+            <p className='text-textColor text-center text-sm sm:w-3/4 lg:w-[60%]'>Our main aim is to focus on business development, content marketing, social media marketing, meme marketing, SEOs, Paid ads (google & meta), Website Development, Ad Production, PR strategies.</p>
           </div>
-          <div className='bg-black rounded-xl flex flex-col md:grid grid-cols-3 gap-2 lg:gap-4 p-2 lg:p-4'>
-            <div className='text-white rounded-xl bg-secondaryBGColor p-2 flex flex-col items-center justify-center'>
+          <div className='rounded-xl flex flex-col md:grid grid-cols-3 gap-4 p-2 lg:p-4'>
+            <div className='text-white p-2 sm:p-0 sm:pr-8 flex flex-col items-center justify-center sm:border-r-2 border-[#FCF74A]'>
               <p className='text-center'>
-
                 <Countdown1 initialCount={100} timeDuration={50} symbol='+' />
                 Projects Completed
               </p>
             </div>
-            <div className='text-white rounded-xl bg-secondaryBGColor p-2 flex flex-col items-center justify-center'>
+            <div className='text-white p-2 sm:p-0 flex flex-col items-center justify-center sm:border-r-2 border-[#FCF74A]'>
               <p className='text-center'>
                 <Countdown1 initialCount={45} timeDuration={100} symbol='+' />
                 Happy Clients
               </p>
             </div>
-            <div className='text-white rounded-xl bg-secondaryBGColor p-2 flex flex-col items-center justify-center'>
+            <div className='text-white rounded-xl p-2 sm:p-0 sm:pl-6 flex flex-col items-center justify-center'>
               <p className='text-center'>
                 <Countdown1 initialCount={90} timeDuration={70} symbol='%' />
                 Client Retaintion Rate
