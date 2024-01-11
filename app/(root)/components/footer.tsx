@@ -61,7 +61,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className='h-full w-full max-w-7xl mx-auto py-5 border-t-2 border-[#FCF74A] flex flex-col md:flex-row gap-2 md:gap-0 justify-between text-textColor text-sm md:text-base text-center md:text-start'>
-                <p className='hover:text-white text-xs lg:text-base cursor-pointer hover:scale-105 transition-all duration-300'>@Copyright 2023, All Rights Reserved</p>
+                <p className='hover:text-white text-xs lg:text-base cursor-pointer hover:scale-105 transition-all duration-300'>@Copyright 2024, All Rights Reserved</p>
                 <div className='flex flex-col md:flex-row gap-2 md:gap-5'>
                     <Link href={'/contact'}>
                         <p className='hover:text-white text-xs lg:text-base cursor-pointer hover:scale-105 transition-all duration-300'>Contact us</p>
