@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import FacebookPixel from '@/components/FacebookPixel'
 import { inter } from './fonts'
 import { Toaster } from '@/components/ui/toaster'
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/react';
 
 
 export const metadata: Metadata = {
@@ -21,6 +23,8 @@ export default function RootLayout({
         {children}
         <Toaster/>
         <FacebookPixel />
+        <SpeedInsights/>
+        <Analytics/>
       </body>
     </html>
   )

@@ -25,7 +25,7 @@ export default function SectionFive() {
     return (
         <section className='bg-black py-10'>
             <div className='w-[80%] lg:w-[70%] mx-auto flex flex-col items-center gap-6 lg:gap-6 mb-6'>
-                <h2 className='text-white text-center flex flex-col text-4xl font-bold'><span className={cn(dancing_script.className, 'text-mainColor font-semibold text-xl sm:text-lg md:text-xl ')}>Our most popular</span><span>Website <span className='text-mainColor'>Packages</span></span></h2>
+                <h2 className='text-white text-center flex flex-col text-4xl font-bold'><span className={cn(dancing_script.className, 'text-mainColor font-semibold text-xl sm:text-lg md:text-xl ')}>Our most popular</span><span>Designing <span className='text-mainColor'>Packages</span></span></h2>
                 <div className="h-[3px] lg:w-[30%] w-[80%] divider rounded-none"></div>
             </div>
             <div className='w-[80%] md:w-[70%] mx-auto lg:mx-0 plans-card'>

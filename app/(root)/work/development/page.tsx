@@ -8,8 +8,45 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 
 
-const images1 = [{ mockup: 'abcapitals mockup.png', web: 'https://abcapital.ae' }, { mockup: 'SHIM MOCKUP.png', web: 'http://shim.co.in' }, { mockup: 'pachmarhi ayurceda mock.png', web: 'https://www.pachmarhiayurveda.com' }];
-const images2 = [{ mockup: 'tathyabaan mockup.png', web: 'https://tathyabaan.in' }, { mockup: 'quikdsp mockup.png', web: 'https://www.quikdsp.com' }, { mockup: 'megha and parv mockup.png', web: 'https://meghaandparvtradingfze.com' }, { mockup: 'geoline mockup.png', web: 'https://geolineglobal.com' }]
+const images1 = [
+    {
+        mockup: 'abcapitals mockup.png',
+        web: 'https://abcapital.ae',
+        tech: '',
+    },
+    {
+        mockup: 'SHIM MOCKUP.png',
+        web: 'http://shim.co.in',
+        tech: '',
+    },
+    {
+        mockup: 'pachmarhi ayurceda mock.png',
+        web: 'https://www.pachmarhiayurveda.com',
+        tech: '',
+    }
+];
+const images2 = [
+    {
+        mockup: 'tathyabaan mockup.png',
+        web: 'https://tathyabaan.in',
+        tech: '',
+    },
+    {
+        mockup: 'quikdsp mockup.png',
+        web: 'https://www.quikdsp.com',
+        tech: '',
+    },
+    {
+        mockup: 'megha and parv mockup.png',
+        web: 'https://meghaandparvtradingfze.com',
+        tech: '',
+    },
+    {
+        mockup: 'geoline mockup.png',
+        web: 'https://geolineglobal.com',
+        tech: '',
+    }
+]
 export default function Page() {
     return (
         <main className='w-full bg-secondaryColor min-h-screen'>
@@ -26,7 +63,7 @@ export default function Page() {
                         `}
                             </span>
                         </p>
-                        <Link href="/services" className='px-4 py-2 text-sm rounded-full bg-white w-fit border-2 border-white font-semibold hover:bg-black hover:text-white transition-all duration-500'>
+                        <Link href="/service/development" className='px-4 py-2 text-sm rounded-full bg-white w-fit border-2 border-white font-semibold hover:bg-black hover:text-white transition-all duration-500'>
                             Our Services
                         </Link>
                     </div>
@@ -37,7 +74,14 @@ export default function Page() {
                     {images1.map((image, index) => <div key={index} className='md:mt-5 grow-0 shrink-0'>
                         <Dialog>
                             <DialogTrigger asChild>
-                                <div className='w-full rounded-lg cursor-pointer'><img src={`/assets/web mockups/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full' /></div>
+                                <div className='w-full rounded-lg cursor-pointer relative'>
+                                    <img src={`/assets/web mockups/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full' />
+                                    <div className='h-10 md:h-14 xl:h-16 w-10 md:w-14 xl:w-16 rounded-full bg-white border-2 border-black absolute top-1 right-1'>
+                                        <div className='w-full h-full relative'>
+                                            <Image src={`/assets/images/react-bbd9870e.png`} alt='' fill />
+                                        </div>
+                                    </div>
+                                </div>
                             </DialogTrigger>
                             <DialogContent>
                                 <AspectRatio ratio={16 / 9} className='lg:w-screen h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] -translate-y-[40%] scale-75 '>
@@ -56,7 +100,14 @@ export default function Page() {
                     {images2.map((image, index) => <div key={index} className='md:mb-3 grow-0 shrink-0'>
                         <Dialog>
                             <DialogTrigger asChild>
-                                <div className='w-full h-full rounded-lg cursor-pointer'><img src={`/assets/web mockups/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full h-full' /></div>
+                                <div className='w-full rounded-lg cursor-pointer relative'>
+                                    <img src={`/assets/web mockups/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full' />
+                                    <div className='h-10 md:h-14 xl:h-16 w-10 md:w-14 xl:w-16 rounded-full bg-white border-2 border-black absolute top-1 right-1'>
+                                        <div className='w-full h-full relative'>
+                                            <Image src={`/assets/images/react-bbd9870e.png`} alt='' fill />
+                                        </div>
+                                    </div>
+                                </div>
                             </DialogTrigger>
                             <DialogContent>
                                 <AspectRatio ratio={16 / 9} className='lg:w-screen h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] -translate-y-[40%] scale-75 '>

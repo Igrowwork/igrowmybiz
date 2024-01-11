@@ -9,9 +9,6 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 
 const images1 = ['Pachmarhi ayurveda 3.png','SHIM 29.png','Lotus Bunglows  1.png','BBB 8.png','SHIM 21.png','Pachmarhi ayurveda 2.png','SHIM 41.png','Lotus Bunglows  5.png','BBB 16.png','SHIM 26.png','Pachmarhi ayurveda 4.png','Career Couselling 1.png','Lotus Bunglows  4.png','BBB 7.png'];
 const images2 = ['VFP 4.png','Ab capital 17.png','AIM 5.png','SHIM 34.png','Tathya ban post 4.png','14 nov event 1.png','Ab capital 29.1.png','AIM 8.png','SHIM 1.png','Tathya ban post 5.png','VFP 10.png','Ab capital 26.png','AIM 2.png','SHIM 95.png']
-
-console.log(images1.length)
-console.log(images2.length)
 export default function Page() {
     return (
         <main className='w-full bg-secondaryColor min-h-screen'>
@@ -28,7 +25,7 @@ export default function Page() {
                                 `}
                             </span>
                         </p>
-                        <Link href="/services" className='px-4 py-2 text-sm rounded-full bg-white w-fit border-2 border-white font-semibold hover:bg-black hover:text-white transition-all duration-500'>
+                        <Link href="/service/socialmediamarketing" className='px-4 py-2 text-sm rounded-full bg-white w-fit border-2 border-white font-semibold hover:bg-black hover:text-white transition-all duration-500'>
                             Our Services
                         </Link>
                     </div>
