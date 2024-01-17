@@ -13,39 +13,46 @@ const images1 = [
     {
         mockup: 'abcapitals mockup.png',
         web: 'https://abcapital.ae',
-        tech: '',
+        button: 'https://abcapital.ae',
+        tech: 'wordpress-19466439',
     },
     {
         mockup: 'SHIM MOCKUP.png',
         web: 'http://shim.co.in',
-        tech: '',
+        button: 'http://shim.co.in',
+        tech: 'wordpress-19466439',
     },
     {
         mockup: 'pachmarhi ayurceda mock.png',
         web: 'https://www.pachmarhiayurveda.com',
-        tech: '',
-    }
+        button: 'https://www.pachmarhiayurveda.com',
+        tech: 'wordpress-19466439',
+    },
 ];
 const images2 = [
     {
         mockup: 'tathyabaan mockup.png',
         web: 'https://tathyabaan.in',
-        tech: '',
+        button: 'https://tathyabaan.in',
+        tech: 'wordpress-19466439',
     },
     {
         mockup: 'quikdsp mockup.png',
         web: 'https://www.quikdsp.com',
-        tech: '',
+        button: 'https://www.quikdsp.com',
+        tech: 'wordpress-19466439',
     },
     {
         mockup: 'megha and parv mockup.png',
         web: 'https://meghaandparvtradingfze.com',
-        tech: '',
+        button: 'https://meghaandparvtradingfze.com',
+        tech: 'wordpress-19466439',
     },
     {
         mockup: 'geoline mockup.png',
         web: 'https://geolineglobal.com',
-        tech: '',
+        button: 'https://geolineglobal.com',
+        tech: 'wordpress-19466439',
     }
 ]
 export default function Page() {
@@ -77,20 +84,23 @@ export default function Page() {
                             <DialogTrigger asChild>
                                 <div className='w-full rounded-lg cursor-pointer relative'>
                                     <img src={`/assets/web mockups/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full' />
-                                    <div className='h-10 md:h-14 xl:h-16 w-10 md:w-14 xl:w-16 rounded-full bg-white border-2 border-black absolute top-1 right-1'>
+                                    <div className='h-10 md:h-14 xl:h-16 w-10 md:w-14 xl:w-16 rounded-full bg-white absolute top-1 right-1'>
                                         <div className='w-full h-full relative'>
-                                            <Image src={`/assets/images/react-bbd9870e.png`} alt='' fill />
+                                            <Image src={`/assets/images/${image.tech}.png`} alt='' fill />
                                         </div>
                                     </div>
                                 </div>
                             </DialogTrigger>
                             <DialogContent>
-                                <AspectRatio ratio={16 / 9} className='lg:w-screen h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] -translate-y-[40%] scale-75 '>
+                                <AspectRatio ratio={16 / 9} className='lg:w-screen h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] -translate-y-[40%] scale-75 lg:scale-[0.7] -mt-10'>
                                     <iframe
                                         src={image.web}
                                         width="100%"
                                         height="100%"
                                     ></iframe>
+                                    <Link href={image.button} target='_blank' className='absolute -bottom-20 lg:-bottom-28 left-1/4 sm:left-[44%] w-fit h-fit py-4 px-10 rounded-full bg-white lg:text-2xl font-medium'>
+                                        Visit Website
+                                    </Link>
                                 </AspectRatio>
                             </DialogContent>
                         </Dialog>
@@ -103,20 +113,23 @@ export default function Page() {
                             <DialogTrigger asChild>
                                 <div className='w-full rounded-lg cursor-pointer relative'>
                                     <img src={`/assets/web mockups/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full' />
-                                    <div className='h-10 md:h-14 xl:h-16 w-10 md:w-14 xl:w-16 rounded-full bg-white border-2 border-black absolute top-1 right-1'>
+                                    <div className='h-10 md:h-14 xl:h-16 w-10 md:w-14 xl:w-16 rounded-full bg-white absolute top-1 right-1'>
                                         <div className='w-full h-full relative'>
-                                            <Image src={`/assets/images/react-bbd9870e.png`} alt='' fill />
+                                            <Image src={`/assets/images/${image.tech}.png`} alt='' fill />
                                         </div>
                                     </div>
                                 </div>
                             </DialogTrigger>
                             <DialogContent>
-                                <AspectRatio ratio={16 / 9} className='lg:w-screen h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] -translate-y-[40%] scale-75 '>
+                                <AspectRatio ratio={16 / 9} className='lg:w-screen h-screen lg:-translate-x-[30%] lg:-translate-y-[30%] -translate-y-[40%] scale-75 -mt-10'>
                                     <iframe
                                         src={image.web}
                                         width="100%"
                                         height="100%"
                                     ></iframe>
+                                    <Link href={image.button} target='_blank' className='absolute -bottom-20 lg:-bottom-28 left-1/4 sm:left-[44%] w-fit h-fit py-4 px-10 rounded-full bg-white lg:text-2xl font-medium'>
+                                        Visit Website
+                                    </Link>
                                 </AspectRatio>
                             </DialogContent>
                         </Dialog>
