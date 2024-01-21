@@ -343,7 +343,7 @@ export function WebDevForm() {
                         </FormItem>
                     )}
                 />
-                <FormField
+                {/* <FormField
                     control={form.control}
                     name="functionality"
                     render={() => (
@@ -391,7 +391,7 @@ export function WebDevForm() {
                             <FormMessage />
                         </FormItem>
                     )}
-                />
+                /> */}
                 <FormField
                     control={form.control}
                     name="budget"
