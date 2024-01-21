@@ -11,7 +11,7 @@ export default function Page() {
 
             <div className={cn('bg-none h-fit w-full relative px-5 lg:px-20 flex justify-between items-center smoothWhiteShadow')}>
                 <Link href={'/services'}>
-                    <div className='relative h-16 w-28 flex items-center'>
+                    <div className='relative h-16 w-28 flex items-center left-8'>
                         <Image
                             src={'/assets/images/new logo-a4aa82bd.png'}
                             alt='logo'
@@ -26,7 +26,7 @@ export default function Page() {
 
             <div className='p-6'>
                 <div className='h-full w-full max-w-2xl mx-auto flex flex-col gap-10'>
-                    <h2 className="text-star py-8 text-white text-2xl sm:text-3xl lg:text-4xl font-bold">Website Development Form</h2>
+                    <h2 className="text-center sm:text-start py-8 text-white text-2xl sm:text-3xl lg:text-4xl font-bold">Website Development Form</h2>
                     <WebDevForm />
                 </div>
             </div>
