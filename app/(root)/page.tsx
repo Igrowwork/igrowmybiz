@@ -4,17 +4,9 @@ import { oxygen } from '../fonts'
 import HomeService from './components/home-service'
 import Image from 'next/image'
 import Testimonials from './components/testimonial'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
 import Slider from './components/slider'
 import Countdown1 from './components/count-down'
 import { Metadata } from 'next'
-import CountDownKammo from '@/components/flip count-down/count-down'
-
-
-export const metadata: Metadata = {
-  title: 'Igrowmybiz',
-  description: 'Social media marketing agency',
-}
 
 const images = ['abcap-a3be2e4f.png', 'bbb-016bebb4.png', 'geoline-221c69ce.png', 'magha-6b5980fd.png', 'more-09e1cd70.png', 'quikdsp-5b6fab73.png', 'rapido-710258dc.png', 'shim-1e9caefd.png', '12 Nov Logo new 01.png', 'Bluejay.png', 'day events logo.png', 'logo (1).png', 'Logo Design.png', 'output-onlinepngtools (2).png', 'vishal lo for whit vid.png', 'abcap-a3be2e4f.png', 'bbb-016bebb4.png', 'geoline-221c69ce.png', 'magha-6b5980fd.png', 'more-09e1cd70.png', 'quikdsp-5b6fab73.png', 'rapido-710258dc.png', 'shim-1e9caefd.png', '12 Nov Logo new 01.png', 'Bluejay.png', 'day events logo.png', 'logo (1).png', 'Logo Design.png', 'output-onlinepngtools (2).png', 'vishal lo for whit vid.png',]
 export default function Home() {

@@ -38,10 +38,10 @@ export default function Page() {
                     {images1.map((image, index) => <div key={index} className='md:mt-5 grow-0 shrink-0'>
                         <Dialog>
                             <DialogTrigger asChild>
-                                <div className='w-full rounded-lg cursor-pointer'><img src={`/assets/social-designs/${image}`} alt={'logo'} className='object-cover rounded-lg w-full' /></div>
+                                <div className='w-full rounded-lg cursor-pointer'><img src={`/assets/social-designs/${image}`} alt={'Social Media'} className='object-cover rounded-lg w-full' /></div>
                             </DialogTrigger>
                             <DialogContent>
-                                <div className='w-full h-full rounded-lg'><img src={`/assets/social-designs/${image}`} alt={'logo'} className='object-contain rounded-lg w-full h-full' /></div>
+                                <div className='w-full h-full rounded-lg'><img src={`/assets/social-designs/${image}`} alt={'Social Media'} className='object-contain rounded-lg w-full h-full' /></div>
                             </DialogContent>
                         </Dialog>
                     </div>
@@ -51,10 +51,10 @@ export default function Page() {
                     {images2.map((image, index) => <div key={index} className='md:mb-3 grow-0 shrink-0'>
                         <Dialog>
                             <DialogTrigger asChild>
-                                <div className='w-full h-full rounded-lg cursor-pointer'><img src={`/assets/social-designs/${image}`} alt={'logo'} className='object-cover rounded-lg w-full h-full' /></div>
+                                <div className='w-full h-full rounded-lg cursor-pointer'><img src={`/assets/social-designs/${image}`} alt={'Digital marketing'} className='object-cover rounded-lg w-full h-full' /></div>
                             </DialogTrigger>
                             <DialogContent>
-                                <div className='w-full h-full rounded-lg'><img src={`/assets/social-designs/${image}`} alt={'logo'} className='object-contain rounded-lg w-full h-full' /></div>
+                                <div className='w-full h-full rounded-lg'><img src={`/assets/social-designs/${image}`} alt={'Digital marketing'} className='object-contain rounded-lg w-full h-full' /></div>
                             </DialogContent>
                         </Dialog>
                     </div>)}
