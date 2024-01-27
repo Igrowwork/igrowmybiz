@@ -83,7 +83,7 @@ export default function Page() {
                         <Dialog>
                             <DialogTrigger asChild>
                                 <div className='w-full rounded-lg cursor-pointer relative'>
-                                    <img src={`/assets/web mockups/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full' />
+                                    <img src={`/assets/web mockups/${image.mockup}`} alt={'software Development'} className='object-cover rounded-lg w-full' />
                                     <div className='h-10 md:h-14 xl:h-16 w-10 md:w-14 xl:w-16 rounded-full bg-white absolute top-1 right-1'>
                                         <div className='w-full h-full relative'>
                                             <Image src={`/assets/images/${image.tech}.png`} alt='' fill />
@@ -112,7 +112,7 @@ export default function Page() {
                         <Dialog>
                             <DialogTrigger asChild>
                                 <div className='w-full rounded-lg cursor-pointer relative'>
-                                    <img src={`/assets/web mockups/${image.mockup}`} alt={'logo'} className='object-cover rounded-lg w-full' />
+                                    <img src={`/assets/web mockups/${image.mockup}`} alt={'Website design'} className='object-cover rounded-lg w-full' />
                                     <div className='h-10 md:h-14 xl:h-16 w-10 md:w-14 xl:w-16 rounded-full bg-white absolute top-1 right-1'>
                                         <div className='w-full h-full relative'>
                                             <Image src={`/assets/images/${image.tech}.png`} alt='' fill />

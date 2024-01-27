@@ -49,10 +49,6 @@ const cardData = [
   },
 ]
 
-export const metadata: Metadata = {
-  title: 'Igrowmybiz - case studies',
-  description: 'Social media marketing agency - case studies',
-}
 
 export default function Page() {
   return (

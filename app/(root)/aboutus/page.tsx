@@ -52,10 +52,6 @@ const TeamCardComponent = [
     expertise: 'NodeJS, REST API, GraphQL API, MongoDB, PostgreSQL, MySQL, Redis, Paypal and Stripe.'
   },
 ]
-export const metadata: Metadata = {
-  title: 'Igrowmybiz - about us',
-  description: 'Social media marketing agency - about us',
-}
 
 export default function Page() {
   return (

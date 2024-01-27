@@ -2,13 +2,6 @@ import { FileText, Linkedin, Mail } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 import { CareerForm } from './components/careerForm'
-import { Metadata } from 'next'
-
-
-export const metadata: Metadata = {
-  title: 'Igrowmybiz - career',
-  description: 'Social media marketing agency - career',
-}
 
 export default function Page() {
   return (

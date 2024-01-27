@@ -3,18 +3,6 @@ import React from 'react'
 import { blogsData } from '../../../../blogs'
 import Link from 'next/link'
 
-
-export async function generateMetadata({ searchParams }: { searchParams: { category: string } }) {
-    const finalBlog = await blogsData.filter((blog) => blog.category === searchParams.category)
-
-    return {
-        title: `Igrowmybiz Blogs - ${finalBlog[0]?.category}`,
-        description: `Explore ${finalBlog[0]?.category} blogs from Igrowmybiz to enhance your knowledge related to this industry.}`
-    }
-}
-
-
-
 export default function Page({ searchParams }: { searchParams: { category: string } }) {
     const finalBlogs = blogsData.filter((data) => data.category === searchParams.category)
     if (finalBlogs.length === 0) {
