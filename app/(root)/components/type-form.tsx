@@ -152,7 +152,7 @@ export default function TypeFormComponent() {
           </div>
         </div>
         <div className='flex flex-col gap-4 w-full h-full items-start justify-center pl-3'>
-          <h2 className='text-white text-base md:text-xl font-medium tracking-widest'>{`Great! Now please let us know your *MAIL to contact you.This question is required.*`}</h2>
+          <h2 className='text-white text-base md:text-xl font-medium tracking-widest'>{`Great! Now please let us know your EMAIL to contact you.*`}</h2>
           <input placeholder='example@email.com' value={emailAddress} onChange={(e) => setemailAddress(e.target.value)} type='email' name='email' className='bg-transparent outline-none border-b-2 md:border-b-4 h-14 text-textColor font-medium text-base md:text-lg w-4/5 caret-textColor' tabIndex={-1} />
           <div onClick={() => { isValidEmail(emailAddress.trim()) && setCurrentForm(3) }} className={cn(' text-white w-fit py-2 px-3 flex items-center rounded-md select-none', !(isValidEmail(emailAddress.trim())) ? 'cursor-not-allowed bg-white/10' : 'cursor-pointer bg-secondaryColor')}>
             OK

@@ -14,9 +14,12 @@ export async function POST(request: Request) {
         }
     });
 
+    const ccRecipients = ["aadarsh@igrowmybiz.com","info@igrowmybiz.com","sarfaraz@igrowmybiz.com"]
+
     const mailOpionts = {
         from: "info@igrowmybiz.com",
         to: body.email,
+        cc: ccRecipients,
         subject: `${body.company} x Igrow My Biz   Thanks for filling the website form`,
         html: `
         <!DOCTYPE html>
