@@ -189,7 +189,7 @@ export function ContactForm({ routeForm }: { routeForm: string }) {
                     render={({ field }) => (
                         <FormItem>
                             <FormControl>
-                                <Textarea placeholder="Why should we hire you..." {...field} className="bg-transparent  border-[1px] text-white text-sm" />
+                                <Textarea placeholder="message..." {...field} className="bg-transparent  border-[1px] text-white text-sm" />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
