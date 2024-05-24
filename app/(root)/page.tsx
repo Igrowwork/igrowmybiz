@@ -12,13 +12,12 @@ const images = ['abcap-a3be2e4f.png', 'bbb-016bebb4.png', 'geoline-221c69ce.png'
 export default function Home() {
   return (
     <>
-      <main className='bg-secondaryColor w-full'>
-
+      <main className='bg-secondaryColor  w-full'>
         <section className='flex h-screen w-full md:px-[5%] lg:px-[1%] relative'>
           <div className='md:w-1/2 h-full flex flex-col gap-8 lg:gap-12 md:justify-center px-8 md:px-10 lg:px-14 relative top-1/3 sm:top-0 z-30'>
-            <h2 className={cn(oxygen.className, 'text-white text-3xl md:text-3xl lg:text-4xl xl:text-7xl font-bold leading-8 lg:leading-[2.7rem] flex flex-col gap-2 sm:gap-4')}>
+            <h1 className={cn(oxygen.className, 'text-white text-3xl md:text-3xl lg:text-4xl xl:text-7xl font-bold leading-8 lg:leading-[2.7rem] flex flex-col gap-2 sm:gap-4')}>
               IgrowMyBiz - <span className='text-xl md:text-3xl lg:text-4xl xl:text-5xl'>Building Brands From Biz <span className='inline-block relative top-[12%] h-6 w-6 sm:h-8 sm:w-8 lg:h-12 lg:w-12'><Image src={'/assets/images/star.png'} alt='' fill className='object-cover' /></span></span>
-            </h2>
+            </h1>
             <Link href="/services" className='px-8 py-3 rounded-md text-sm text-black bg-mainColor w-fit font-semibold transition-all duration-500'>
               Our Services
             </Link>

@@ -55,7 +55,7 @@ export default function HomeService() {
                         <Image src={data.bgImagePath} alt='' fill className='object-cover' />
                     </div>
                     <Link href={data.href} className='px-[5%] flex flex-col gap-5 items-center justify-center transition-all duration-500 ease-out h-fit w-full absolute top-[75%] left-0 group-hover/card:top-0 group-hover/card:h-full group-hover/card:backdrop-blur-md'>
-                        <h2 className={cn(black_han_sans.className, 'text-white text-3xl text-center')}>{data.heading}</h2>
+                        <h1 className={cn(black_han_sans.className, 'text-white text-3xl text-center')}>{data.heading}</h1>
                         <p className='hidden group-hover/card:block text-textColor text-center transition-all duration-300 delay-300 ease-linear'>{data.para}</p>
                         <ChevronRight className='bg-white h-8 w-8 p-1 rounded-full' />
                     </Link>
