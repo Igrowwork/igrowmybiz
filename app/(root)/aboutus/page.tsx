@@ -40,17 +40,7 @@ const TeamCardComponent = [
     image: 'chanchal.jpg',
     position: 'UI/UX Designer',
     expertise: 'Expert in - Research, Prototyping, Wireframing, Layout Design, Visual Design and Figma Tools'
-  },
-  {
-    image: 'kamran.png',
-    position: 'Front-End Developer',
-    expertise: 'ReactJs, NextJs, TailwindCSS, WordPress, Responsive Design, GitHub, JavaScript/TypeScript'
-  },
-  {
-    image: 'sujood.png',
-    position: 'Back-End Developer',
-    expertise: 'NodeJS, REST API, GraphQL API, MongoDB, PostgreSQL, MySQL, Redis, Paypal and Stripe.'
-  },
+  }
 ]
 
 export default function Page() {
