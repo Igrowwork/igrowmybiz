@@ -26,7 +26,7 @@ const cardData = [
   {
     head: "SHIM Case Study",
     href: "/casestudies/shim",
-    para: "Description: Sant Hirdaram institute of Management, Bhopal is an only women’s institute and the only institute in MP which provides IMBA right after 12th class along with MBA programs",
+    para: "Sant Hirdaram institute of Management, Bhopal is an only women’s institute and the only institute in MP which provides IMBA right after 12th class along with MBA programs. It is committed to facilitate holistic-cum-professional development of the students in terms of realistic learning with endowed ethical values.",
     imagePath: "/assets/images/girls-group.jpg",
     iconPath: "/assets/images/ind-logo.png",
     iconName: "IND",
