@@ -143,6 +143,7 @@ export default function Page() {
               linkedin="https://www.linkedin.com/in/aadarsh-kumar-3b44a1170/"
               name="Aadarsh Kumar"
               mail="aadarsh@igrowmybiz.com"
+              alt=""
             />
             <FoundersCards
               image="sarfaraz_photo.jpg"
@@ -151,6 +152,7 @@ export default function Page() {
               linkedin="https://www.linkedin.com/in/sarfaraz-ajm-abadi-8636231b4/ "
               name="Sarfaraz Ajm Abadi"
               mail="sarfaraz@igrowmybiz.com"
+              alt=""
             />
           </div>
         </div>
