@@ -16,17 +16,23 @@ const TeamCardComponent = [
     image: "niharika-rajupt.jpg",
     position: "Graphic designer",
     expertise:
-      "Elevating brands through dynamic visuals, blending creativity with precision to captivate audiences in a pixel-perfect world.",
+      "Specializes in creating visually appealing designs for digital and print media, including logos, brochures, and advertisements.",
   },
   {
-    image: "Aniket-kalawat.jpg",
-    position: "Front-End Developer",
+    image: "aniketk.jpg",
+    position: "Full Stack Developer",
     expertise:
-      "Design is not just what it looks like and feels like. Design is how it works.",
+      "Proficient in developing and maintaining web applications across the full stack, from crafting interactive front-end interfaces to optimizing back-end systems and database interactions.",
+  },  
+  {
+    image: "aniketp.jpg",
+    position: "Full Stack Developer",
+    expertise:
+      "Skilled in building comprehensive web solutions, including designing user-friendly interfaces and implementing robust server-side logic and database management.",
   },
   {
-    image: "Aniket-Patidar.jpeg",
-    position: "Backend developer",
+    image: "aditi.jpg",
+    position: "Business Developer",
     expertise:
       "Transforming complex code into seamless digital experiences as a dedicated backend developer, shaping the future of web functionality.",
   },
@@ -36,18 +42,10 @@ const TeamCardComponent = [
     expertise:
       "Helping clients communicate and appealing image through digital media.",
   },
-
   {
-    image: "sneha.jpg",
-    position: "Paid Media Expert",
-    expertise:
-      "Expertise-Marketing Strategies, Social Media & Google Ads, Email & WhatsApp Automation.",
-  },
-  {
-    image: "sujood.png",
-    position: "Back-End Developer",
-    expertise:
-      "NodeJS, REST API, GraphQL API, MongoDB, PostgreSQL, MySQL, Redis, Paypal and Stripe.",
+    image: "kshitij-agrawal.jpeg",
+    position: "VFX & Motion Editor",
+    expertise: "Solid motion design work and animation skills.",
   },
   {
     image: "Anas-qureshi.jpeg",
@@ -62,14 +60,10 @@ const TeamCardComponent = [
       "ReactJs, NextJs, TailwindCSS, WordPress, Responsive Design, GitHub, JavaScript/TypeScript",
   },
   {
-    image: "kalash.jpg",
-    position: "Content Head",
-    expertise: "Creative Writing, Copy Writing, Story Telling, SEO Writing",
-  },
-  {
-    image: "kshitij-agrawal.jpeg",
-    position: "VFX & Motion Editor",
-    expertise: "Solid motion design work and animation skills.",
+    image: "sneha.jpg",
+    position: "Paid Media Expert",
+    expertise:
+      "Expertise-Marketing Strategies, Social Media & Google Ads, Email & WhatsApp Automation.",
   },
 ];
 
@@ -99,15 +93,15 @@ export default function Page() {
       <section className="py-10">
         <div className="sm:w-4/5 mx-auto rounded-2xl px-4 sm:px-0 py-8 sm:py-0 sm:p-12 flex flex-col gap-6 items-center">
           <div className="flex flex-col gap-4 items-center">
-            <h1 className="text-white font-semibold text-center text-3xl lg:text-5xl">
+            <h2 className="text-white font-semibold text-center text-3xl lg:text-5xl">
               What do we do?
-            </h1>
-            <h1 className="text-textColor text-center text-sm sm:w-3/4 lg:w-[60%]">
+            </h2>
+            <p className="text-textColor text-center text-sm sm:w-3/4 lg:w-[60%]">
               Our main aim is to focus on business development, content
               marketing, social media marketing, meme marketing, SEOs, Paid ads
               (google & meta), Website Development, Ad Production, PR
               strategies.
-            </h1>
+            </p>
           </div>
           <div className="rounded-xl flex flex-col md:grid grid-cols-3 gap-4 p-2 lg:p-4">
             <div className="text-white p-2 sm:p-0 sm:pr-8 flex flex-col items-center justify-center sm:border-r-2 border-[#FCF74A]">
@@ -149,7 +143,6 @@ export default function Page() {
               linkedin="https://www.linkedin.com/in/aadarsh-kumar-3b44a1170/"
               name="Aadarsh Kumar"
               mail="aadarsh@igrowmybiz.com"
-              alt="Aadarsh Kumar,"
             />
             <FoundersCards
               image="sarfaraz_photo.jpg"
@@ -158,7 +151,6 @@ export default function Page() {
               linkedin="https://www.linkedin.com/in/sarfaraz-ajm-abadi-8636231b4/ "
               name="Sarfaraz Ajm Abadi"
               mail="sarfaraz@igrowmybiz.com"
-              alt="Sarfaraz Ajm Abadi, co-founder of our IGROW MY BIZ"
             />
           </div>
         </div>
