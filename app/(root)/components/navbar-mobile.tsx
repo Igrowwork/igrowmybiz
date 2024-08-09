@@ -51,6 +51,11 @@ export default function NavBarMobile() {
             label: "Contact",
             active: path === "/contact"
         },
+        {
+            href: "/our-portfolio",
+            label: "Our Portfolio",
+            active: path === "/our-portfolio"
+        },
     ]
     return (
         <Sheet>
