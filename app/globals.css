@@ -397,3 +397,9 @@
         transform: rotate(405deg);
     }
 }
+
+
+::-webkit-scrollbar {
+    display: none;
+  }
+  

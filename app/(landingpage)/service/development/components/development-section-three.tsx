@@ -67,13 +67,23 @@ export default function DevelopmentSectionThree() {
             <div className='py-4 border-mainColor border-y-4 sm:h-28 h-24 mt-10'>
                 <div className='overflow-hidden relative h-full w-[90%] xl:w-4/5 mx-auto my-auto'>
                     <div className='flex absolute logo-scroll-three justify-evenly gap-5 w-full'>
+                    <div className='relative grow-0 shrink-0 w-12 h-12 sm:w-16 sm:h-16'>
+                            <Image src={'/assets/images/nodejs.svg'} alt='bbb' fill className='filter grayscale hover:grayscale-0 object-contain scale-[1.5]' />
+                        </div>
+            
+                        <div className='relative grow-0 shrink-0 w-12 h-12 sm:w-16 sm:h-16'>
+                            <Image src={'/assets/images/t3-stack.svg'} alt='bbb' fill className='filter grayscale hover:grayscale-0 object-contain' />
+                        </div>
+
+                       
+
                         <div className='relative grow-0 shrink-0 w-12 h-12 sm:w-16 sm:h-16'>
                             <Image src={'/assets/images/css-d2e9f9dd.png'} alt='bbb' fill className='filter grayscale hover:grayscale-0 object-contain' />
                         </div>
                         <div className='relative grow-0 shrink-0 w-12 h-12 sm:w-16 sm:h-16'>
                             <Image src={'/assets/images/figma-0a1384c5.png'} alt='bbb' fill className='filter grayscale hover:grayscale-0 object-contain' />
                         </div>
-                        <div className='relative grow-0 shrink-0 w-12 h-12 sm:w-16 sm:h-16'>
+                        <div className='relative grow-0 shrink-0 w-12 h-12 sm:w-16 sm:h-16'>    
                             <Image src={'/assets/images/js-30558d7e.png'} alt='bbb' fill className='filter grayscale hover:grayscale-0 object-contain' />
                         </div>
                         <div className='relative grow-0 shrink-0 w-12 h-12 sm:w-16 sm:h-16'>
@@ -85,6 +95,11 @@ export default function DevelopmentSectionThree() {
                         <div className='relative grow-0 shrink-0 w-12 h-12 sm:w-16 sm:h-16'>
                             <Image src={'/assets/images/wordpress-19466439.png'} alt='bbb' fill className='filter grayscale hover:grayscale-0 object-contain' />
                         </div>
+
+                        <div className='relative grow-0 shrink-0 w-12 h-12 sm:w-16 sm:h-16'>
+                            <Image src={'/assets/images/expressjs_logo.webp'} alt='bbb' fill className='filter grayscale hover:grayscale-0 object-contain scale-[1.5]' />
+                        </div>
+
                         <div className='relative grow-0 shrink-0 w-12 h-12 sm:w-16 sm:h-16'>
                             <Image src={'/assets/images/typescript.svg'} alt='bbb' fill className='filter grayscale hover:grayscale-0 object-contain' />
                         </div>
@@ -97,6 +112,9 @@ export default function DevelopmentSectionThree() {
                         <div className='relative grow-0 shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-white'>
                             <Image src={'/assets/images/mongodb.svg'} alt='bbb' fill className='filter grayscale hover:grayscale-0 object-contain' />
                         </div>
+                    
+                       
+                    
                     </div>
                 </div>
             </div>

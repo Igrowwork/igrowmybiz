@@ -13,8 +13,8 @@ const TeamCardComponent = [
       "Expert in - Research, Prototyping, Wireframing, Layout Design, Visual Design and Figma Tools",
   },
   {
-    image: "Niharika.jpg",
-    position: "Graphic Designer",
+    image: "niharika-rajupt.jpg",
+    position: "Graphic designer",
     expertise:
       "Specializes in creating visually appealing designs for digital and print media, including logos, brochures, and advertisements.",
   },
@@ -34,12 +34,7 @@ const TeamCardComponent = [
     image: "aditi.jpg",
     position: "Business Developer",
     expertise:
-      "Skilled in identifying business opportunities, building client relationships, and driving growth through strategic planning and sales.",
-  },
-  {
-    image: "kalash.jpg",
-    position: "Content Head",
-    expertise: "Creative Writing, Copy Writing, Story Telling, SEO Writing",
+      "Transforming complex code into seamless digital experiences as a dedicated backend developer, shaping the future of web functionality.",
   },
   {
     image: "Husain Image.png",
@@ -59,10 +54,10 @@ const TeamCardComponent = [
       "Video & Audio Editing & also has expertise in story telling in a engaging way.",
   },
   {
-    image: "Shikha_Tomar.jpg",
-    position: "Automation & Funnel Executive",
+    image: "kamran.png",
+    position: "Front-End Developer",
     expertise:
-      "Client relationship management & expertise in building funnels for tech starters.",
+      "ReactJs, NextJs, TailwindCSS, WordPress, Responsive Design, GitHub, JavaScript/TypeScript",
   },
   {
     image: "sneha.jpg",
@@ -148,6 +143,7 @@ export default function Page() {
               linkedin="https://www.linkedin.com/in/aadarsh-kumar-3b44a1170/"
               name="Aadarsh Kumar"
               mail="aadarsh@igrowmybiz.com"
+              alt=""
             />
             <FoundersCards
               image="sarfaraz_photo.jpg"
@@ -156,6 +152,7 @@ export default function Page() {
               linkedin="https://www.linkedin.com/in/sarfaraz-ajm-abadi-8636231b4/ "
               name="Sarfaraz Ajm Abadi"
               mail="sarfaraz@igrowmybiz.com"
+              alt=""
             />
           </div>
         </div>

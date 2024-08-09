@@ -34,7 +34,7 @@ module.exports = {
         'mainColor': '#F6E824',
         'textColor': '#8E8E8E',
         'secondaryColor': '#141414',
-        'secondaryBGColor': '#242424'
+        'secondaryBGColor': '#242424',
       },
     },
   },
