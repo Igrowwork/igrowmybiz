@@ -12,7 +12,7 @@ export default function Page() {
                     <div className='relative h-16 w-28 flex items-center left-8'>
                         <Image
                             src={'/assets/images/new logo-a4aa82bd.png'}
-                            alt='logo'
+                            alt='igrowmybiz-logo'
                             fill
                             className='transition-all delay-75 ease-in-out scale-150 object-contain'
                         />

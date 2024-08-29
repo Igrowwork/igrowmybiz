@@ -6,6 +6,12 @@ import React, { useState } from 'react'
 
 const TestimonialsContent = [
     {
+        Name: 'Bharat Bajaj',
+        CompanyName: 'Founder, AB Capital Services',
+        Review: 'Hii Igrow My Biz Team let me take this opportunity to Thank you from the bottom of my Heart. The Campaigns you started running for us gave us recognition and much-needed clients in the form of Leads and my business took off. I got many potential clients and the chain continues even today. All of us have to take different pathways to move ahead in life and let me reaffirm you that the foundation you gave AB Capital social media from the beginning will remain warm in our hearts. We will be in touch and will ask for your support wherever I can',
+        media: <Image src={'/assets/images/bharat-bajaj.jpg'} alt='' fill className='object-cover object-top rounded-lg'/>
+    },
+    {
         Name: 'Vanya',
         CompanyName: 'The Geeky Yougin',
         Review: 'I am so impressed with the details and the planning that it felt like we have been working together for such a long time. Would strongly recommend them if you want anything to do with video.',

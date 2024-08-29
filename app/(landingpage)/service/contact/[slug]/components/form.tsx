@@ -29,9 +29,7 @@ import { useRouter } from "next/navigation"
 
 const FormSchema = z.object({
     name: z.string(),
-    phone: z.string().refine((value) => /^[0-9]+$/.test(value), {
-        message: "Please enter a valid phone number with only numbers.",
-    }),
+    phone: z.string(),
     email: z.string(),
     message: z.string().optional(),
     service: z

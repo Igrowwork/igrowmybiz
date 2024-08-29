@@ -9,11 +9,11 @@ export default function Page() {
       <section className='pt-32 flex flex-col gap-20 items-center'>
         <div className='relative h-96 w-10/12 rounded-xl overflow-hidden'>
           <div className='bg-black bg-opacity-20 sm:bg-opacity-30 absolute top-0 left-0 h-full w-full z-10'></div>
-          <Image src={"/assets/images/career.jpg"} alt='BG-Image' fill className='object-cover' />
+          <Image src={"/assets/images/career.jpg"} alt='igromybiz-carrer' fill className='object-cover' />
         </div>
 
         <div className='flex flex-col gap-10 items-center px-5 sm:px-0 mb-10'>
-          <h2 className='text-white text-2xl font-bold text-center'>Careers @ IgrowMyBiz</h2>
+          <h1 className='text-white text-2xl font-bold text-center'>Careers @ IgrowMyBiz</h1>
           <p className='text-textColor text-center'>
             Are you looking for career opportunities in <span className='text-white text-lg font-bold'>DIGITAL MARKETING?</span>
             <br />

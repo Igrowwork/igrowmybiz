@@ -46,6 +46,11 @@ export default function RoutesClient() {
             label: "Contact",
             active: path === "/contact"
         },
+        {
+            href: "/our-work",
+            label: "Our Work",
+            active: path === "/our-work"
+        },
     ]
     return (
         <>

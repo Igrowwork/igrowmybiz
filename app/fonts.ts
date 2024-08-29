@@ -1,4 +1,4 @@
-import { Inter, Dancing_Script, Oxygen, Black_Han_Sans, Cutive } from 'next/font/google'
+import { Inter, Dancing_Script, Oxygen, Black_Han_Sans, Cutive , Poppins } from 'next/font/google'
 
 export const inter = Inter({
     subsets: ['latin'],
@@ -22,6 +22,11 @@ export const black_han_sans = Black_Han_Sans({
 })
 
 export const cutive = Cutive({
+    weight : ['400'],
+    subsets: ['latin'],
+})
+
+export const poppins = Poppins({
     weight : ['400'],
     subsets: ['latin'],
 })

@@ -8,6 +8,7 @@ import Link from 'next/link'
 import React from 'react'
 
 const Reviews = [
+
     {
         Comment: 'Working with iGrow was great as they are very knowledgeable and experienced in this field of work.',
         Icon: '43.jpg',
@@ -64,6 +65,9 @@ const Reviews = [
         Place: 'Mumbai, India',
         position: 'Co-founder at Startup'
     },
+
+
+
 ]
 
 export default function DevelopmentSectionSeven() {
