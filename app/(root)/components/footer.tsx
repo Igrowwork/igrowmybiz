@@ -13,6 +13,8 @@ import {
 import FooterRoutes from "./footer-routes";
 
 export default function Footer() {
+
+
   return (
     <footer className="bg-[#141414] border-t flex flex-col justify-center w-full border-white/10 relative z-[10] px-[5%]">
       {/* <div className='w-full flex flex-col gap-5 lg:gap-0 lg:flex-row items-start md:items-center justify-between px-10 lg:px-20 py-6'>
@@ -120,7 +122,7 @@ export default function Footer() {
       </div>
       <div className="h-full w-full max-w-7xl mx-auto py-5 border-t-2 border-[#FCF74A] flex flex-col md:flex-row gap-2 md:gap-0 justify-between text-textColor text-sm md:text-base text-center md:text-start">
         <p className="hover:text-white text-xs lg:text-base cursor-pointer hover:scale-105 transition-all duration-300">
-          @Copyright 2024, All Rights Reserved
+          @Copyright {new Date().getFullYear()}, All Rights Reserved
         </p>
         <div className="flex flex-col md:flex-row gap-2 md:gap-5">
           <Link href={"/contact"}>

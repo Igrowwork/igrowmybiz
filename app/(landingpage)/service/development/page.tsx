@@ -38,7 +38,7 @@ export default function Page() {
                 <DevelopmentSectionEight />
             </main>
             <footer className='bg-black h-10 w-full flex items-center justify-center'>
-                <p className='text-gray-400 text-center'>&copy; 2023 igrowmybiz.com. All rights reserved.</p>
+                <p className='text-gray-400 text-center'>&copy; {new Date().getFullYear()} igrowmybiz.com. All rights reserved.</p>
             </footer>
         </>
     )
