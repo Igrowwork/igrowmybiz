@@ -1,6 +1,8 @@
 // types.ts
+
 export interface Service {
     name: string;
+    details:string[];
 }
 
 export interface ProjectDetail {
@@ -9,11 +11,21 @@ export interface ProjectDetail {
     language: string;
     timescale: string;
     system: string;
+    features:string[]
 }
 
 export interface BannerData {
     img: string;
     name: string;
+    data:string
+}
+export interface Solution {
+    name: string;
+    description: string;
+}
+export interface Results {
+    name: string;
+    description: string;
 }
 
 export interface ImageData {
@@ -45,6 +57,9 @@ export interface PageData {
     images: ImageData[];
     workDetail: WorkDetail;
     colors: Colors; 
+    results:Results[];
+    solution:Solution[];
+    conclusion:String;
 }
 
 
