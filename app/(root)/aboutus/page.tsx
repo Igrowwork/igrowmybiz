@@ -19,7 +19,7 @@ const TeamCardComponent = [
       "Specializes in creating visually appealing designs for digital and print media, including logos, brochures, and advertisements.",
   },
   {
-    image: "aniketk.jpg",
+    image: "Aniket-kalawat.jpg",
     position: "Full Stack Developer",
     expertise:
       "Proficient in developing and maintaining web applications across the full stack, from crafting interactive front-end interfaces to optimizing back-end systems and database interactions.",
