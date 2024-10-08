@@ -10,6 +10,9 @@ import Image from "next/image";
 import WorkDetailSlider from "../../_components/work-detail-slider";
 import { getDummyData, PageId } from "@/dummy-data/page"; // Import your data function
 import { RxCross1 } from "react-icons/rx";
+import WorkCard from "@/app/(auth)/our-portfolio/_components/work-card";
+import Link from "next/link";
+import RecommendedSlider from "../../_components/recommend-slider";
 
 interface PageProps {
   params: {
@@ -51,6 +54,57 @@ const Page: React.FC<PageProps> = ({ params }) => {
     setSelectedService(null);
   };
 
+  const arr =[
+    {
+        img:'/assets/portfolio-images/02.png',
+        logo:'/assets/portfolio-images/02a.png',
+        head:'E-commers Website',
+        detail:'Start chatting about the work you need, and we’ll get started right away.',
+        id:'pachmarhi',
+
+    },
+    {
+        img:'/assets/portfolio-images/03.png',
+        logo:'/assets/portfolio-images/03a.png',
+        head:'E-commers Website',
+        detail:'Start chatting about the work you need, and we’ll get started right away.',
+        id:'eurotech',
+
+    },
+    {
+        img:'/assets/portfolio-images/04.png',
+        logo:'/assets/portfolio-images/04a.png',
+        head:'Hotel Website',
+        detail:'Start chatting about the work you need, and we’ll get started right away.',
+        id:'hotelnatraj',
+
+    },
+    // {
+    //     img:'/assets/portfolio-images/05.png',
+    //     logo:'/assets/portfolio-images/05b.png',
+    //     head:'Dental Clinic Website',
+    //     detail:'Start chatting about the work you need, and we’ll get started right away.',
+    //     id:'vishnu-dental',
+
+    // },
+    // {
+    //     img:'/assets/portfolio-images/06.png',
+    //     logo:'/assets/portfolio-images/06a.png',
+    //     head:'GYM Website',
+    //     detail:'Start chatting about the work you need, and we’ll get started right away.',
+    //     id:'gym',
+
+    // },
+    // {
+    //     img:'/assets/portfolio-images/07.png',
+    //     logo:'/assets/portfolio-images/07a.png',
+    //     head:'AB Capital',
+    //     detail:'Start chatting about the work you need, and we’ll get started right away.',
+    //     id:'abcapital',
+
+    // },
+]
+
   return (
     <div className={cn("h-full w-full min-h-screen", poppins.className)}>
       <Banner
@@ -58,12 +112,12 @@ const Page: React.FC<PageProps> = ({ params }) => {
         name={bannerData.name}
         data={bannerData.data}
       />
-      <div className="max-w-6xl xl:p-0 p-6  mx-auto h-full w-full xl:my-10 md:my-8 sm:my-6 my-2">
-        <div className="">
-          <div className="grid md:grid-cols-2 grid-cols-1 items-start gap-8">
+      <div className="h-full w-full xl:my-10 md:my-8 sm:my-6 my-2">
+        <div className="max-w-6xl xl:p-0 p-6  mx-auto ">
+          <div className="grid md:grid-cols-2 grid-cols-1 items-start md:gap-8">
             <div>
               {/* Buttons for services */}
-              <div className="grid grid-cols-2 items-start justify-start gap-4 my-4">
+              <div className="grid grid-cols-2 items-start justify-start sm:gap-4 gap-2 md:my-4 my-2">
                 {services.map((ele, index) => (
                   <span
                     key={index}
@@ -115,19 +169,19 @@ const Page: React.FC<PageProps> = ({ params }) => {
 
             <div>
               <h1
-                className={`xl:text-[2rem] md:text-3xl sm:text-2xl text-xl font-medium text-[#282D46] text-[${colors.heading}]`}
+                className={`xl:text-[2rem] md:text-3xl sm:text-2xl text-xl font-medium text-justify text-[#282D46] text-[${colors.heading}]`}
               >
                 {projectDetail.title}
               </h1>
               <p
-                className={`md:text-xl sm:text-lg text-base font-normal text-[#625D60] my-6`}
+                className={`md:text-xl sm:text-lg text-base font-normal text-[#625D60] my-6 text-justify`}
               >
                 {projectDetail.description}
               </p>
             </div>
           </div>
         </div>
-        <div>
+        <div className="max-w-6xl xl:p-0 p-6  mx-auto ">
           <h1
             className={`text-[${colors.primary}] xl:text-[2rem] md:text-3xl sm:text-2xl text-xl font-medium flex items-center gap-4`}
             style={{ color: colors.primary }}
@@ -205,30 +259,29 @@ const Page: React.FC<PageProps> = ({ params }) => {
             style={{ backgroundColor: colors.primary }}
           />
         </div>
-        <div className="grid grid-cols-12">
+        <div className="grid grid-cols-12 max-w-7xl mx-auto">
           <div className="w-full col-span-9 h-full rounded-2xl">
-            <div className="md:h-[35vw] sm:h-[50vw] h-[60vw] w-full relative mt-20">
-              <Image
+            <div className="md:h-[35vw] sm:h-[50vw] h-[50vw] w-full relative flex justify-center items-center">
+              <Image src={'/assets/portfolio-images/computer-mockup.png'} alt="No Image" fill className="h-full w-full object-cover z-10"  />
+              <img
                 src={images[1].src}
                 alt={images[1].alt}
-                fill
-                className="w-full h-full max-sm:scale-150 object-cover "
-              />
-              {/* <Image src={images[0].src} alt={images[0].alt} fill className='object-cover h-full w-full' /> */}
+                className="border h-[20vw] w-[37vw]  object-cover "
+                />
             </div>
           </div>
-          <div className="col-span-3 overflow-hidden h-full w-full">
-            <div className="h-[45vw] w-full relative">
-              <Image
+          <div className="col-span-3 h-full w-full">
+            <div className="md:h-[35vw] sm:h-[50vw] h-[50vw] w-full relative z-10">
+              <Image src={'/assets/portfolio-images/phone-mockup.png'} alt="No Image" fill className="h-full w-full object-cover z-10 overflow-hidden"  />
+              <img
                 src={images[3].src}
                 alt={images[3].alt}
-                fill
-                className="object-cover w-full h-full overflow-hidden max-sm:scale-150 scale-90"
+                className="object-cover w-full h-full "
               />
             </div>
           </div>
         </div>
-        <div className="my-8">
+        <div className="my-8 max-w-6xl xl:p-0 p-6  mx-auto ">
           <h1
             className={`text-[${colors.primary}] xl:text-[2rem] md:text-3xl sm:text-2xl text-xl font-medium flex items-center gap-4`}
             style={{ color: colors.primary }}
@@ -236,12 +289,12 @@ const Page: React.FC<PageProps> = ({ params }) => {
             Project Overview <FaArrowRightLong />
           </h1>
           <p
-            className={`md:text-xl sm:text-lg text-base font-normal text-[#625D60] my-4`}
+            className={`md:text-xl sm:text-lg text-base font-normal text-[#625D60] my-4 text-justify`}
           >
             {workDetail.context}
           </p>
           <p
-            className={`md:text-xl sm:text-lg text-base font-normal text-[#625D60] my-4`}
+            className={`md:text-xl sm:text-lg text-base font-normal text-[#625D60] my-4 text-justify`}
           >
             {workDetail.description}
           </p>
@@ -249,7 +302,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
         {/* <div className='md:h-[35vw] sm:h-[40vw] h-[60vw]'>
                     <WorkDetailSlider isColor={colors.primary} />
                 </div> */}
-        <div className="my-8">
+        <div className="my-8 max-w-6xl xl:p-0 p-6  mx-auto">
           <h1
             className={`text-[${colors.primary}] xl:text-[2rem] md:text-3xl sm:text-2xl text-xl font-medium flex items-center gap-4`}
             style={{ color: colors.primary }}
@@ -257,13 +310,12 @@ const Page: React.FC<PageProps> = ({ params }) => {
             Goals <FaArrowRightLong />
           </h1>
           <p
-            className={`md:text-xl sm:text-lg text-base  font-normal text-[#625D60] my-6`}
+            className={`md:text-xl sm:text-lg text-base  font-normal text-[#625D60] my-6 text-justify`}
           >
             {workDetail.goals}
           </p>
-          {/* <p className={`md:text-xl sm:text-lg text-base  font-normal text-[${colors.secondary}] my-6`}>{workDetail.description}</p> */}
         </div>
-        <div className="grid md:grid-cols-7 md:gap-8 sm:gap-6 gap-4">
+        <div className="grid md:grid-cols-7 md:gap-8 sm:gap-6 gap-4 max-w-6xl xl:p-0 p-6  mx-auto">
           <div className="md:col-span-4">
             <h1
               className={`text-[${colors.primary}] xl:text-[2rem] md:text-3xl sm:text-2xl text-xl font-medium flex items-center gap-4`}
@@ -275,7 +327,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
               {workDetail.businessChallenges.map((challenge, index) => (
                 <li
                   key={index}
-                  className={`md:text-xl sm:text-lg text-base  font-normal text-[#625D60] my-3`}
+                  className={`md:text-xl sm:text-lg text-base  text-justify font-normal text-[#625D60] my-3`}
                 >
                   {challenge}
                 </li>
@@ -291,32 +343,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
             />
           </div>
         </div>
-        {/* <div className='xl:my-10 md:my-8 sm:my-6 my-2'>
-                    <h1 className={`text-[${colors.primary}] xl:text-[2rem] md:text-3xl sm:text-2xl text-xl font-medium flex items-center gap-4 my-2`}  style={{color : colors.primary }}>
-                        Customer relationship management (CRM) <FaArrowRightLong />
-                    </h1>
-                    <div className='h-[40vw] w-full relative my-6'>
-                        <Image src={'/assets/portfolio-images/10.png'} alt='No Preview' fill className='object-contain' />
-                    </div>
-                    <p className={`md:text-xl sm:text-lg text-base  font-normal text-[${colors.secondary}] my-6`}>{workDetail.crm}</p>
-                </div> */}
-        <div className="xl:my-10 md:my-8 sm:my-6 my-2">
-          <h1
-            className={`text-[${colors.primary}] xl:text-[2rem] md:text-3xl sm:text-2xl text-xl font-medium flex items-center gap-4`}
-            style={{ color: colors.primary }}
-          >
-            Our Social Media Work <FaArrowRightLong />
-          </h1>
-          {/* <div className='h-[40vw] w-full relative my-6'>
-                        <Image src={'/assets/portfolio-images/11.png'} alt='No Preview' fill className='object-contain' />
-                    </div> */}
-          <p
-            className={`md:text-xl sm:text-lg text-base  font-normal text-[${colors.secondary}] my-6`}
-          >
-            {workDetail.socialMediaWork}
-          </p>
-        </div>
-        <div>
+        <div className="max-w-6xl xl:p-0 p-6  mx-auto ">
           <div>
             <h1
               className={`text-[${colors.primary}] xl:text-[2rem] md:text-3xl sm:text-2xl text-xl font-medium flex items-center gap-4`}
@@ -324,7 +351,7 @@ const Page: React.FC<PageProps> = ({ params }) => {
             >
               Solutions <FaArrowRightLong />
             </h1>
-            <div className="">
+            <div className=" text-justify">
               {solution.map((ele, i) => (
                 <li className="md:my-6 sm:my-4 my-2">
                   <span className="md:text-2xl sm:text-xl text-md font-medium text-[#332F32] ">
@@ -341,142 +368,38 @@ const Page: React.FC<PageProps> = ({ params }) => {
               ))}
             </div>
           </div>
-          {/* <div>
-                    <h1 className={`text-[${colors.primary}] xl:text-[2rem] md:text-3xl sm:text-2xl text-xl font-medium flex items-center gap-4`}  style={{color : colors.primary }}>
-                    Results <FaArrowRightLong /></h1>
-                    <div className=''>
-                    {
-                        results.map((ele,i) => (
-                            <li className='md:my-6 sm:my-4 my-2'>
-                                <span className='md:text-2xl sm:text-xl text-md font-medium text-[#332F32] '>{ele.name}</span>:
-                                <span className={`text-[${colors.secondary}] font-normal md:text-xl text-sm`}> {ele.description}</span>
-                            </li>
-                        ))
-                    }
-                    </div>
-                </div> */}
+
+        </div>
+        
+        <div className="xl:my-10 md:my-8 sm:my-6 my-2 max-w-6xl xl:p-0 p-6  mx-auto">
+          <h1
+            className={`text-[${colors.primary}] xl:text-[2rem] md:text-3xl sm:text-2xl text-xl font-medium flex items-center gap-4`}
+            style={{ color: colors.primary }}
+          >
+            Our Social Media Work <FaArrowRightLong />
+          </h1>
+          <p
+            className={`md:text-xl sm:text-lg text-base  font-normal text-[${colors.secondary}] my-6 text-justify`}
+          >
+            {workDetail.socialMediaWork}
+          </p>
+        </div>
+        
+        <div className="xl:my-10 md:my-8 sm:my-6 my-2 max-w-6xl xl:p-0 p-6  mx-auto">
+          <h1
+            className={`text-[${colors.primary}] xl:text-[2rem] md:text-3xl sm:text-2xl text-xl font-medium flex items-center justify-center gap-4`}
+            style={{ color: colors.primary }}
+          >
+           Recommendation
+          </h1>
+         <div className="mt-4 text-white">
+         <RecommendedSlider isColor={colors.primary} />
+         </div>
         </div>
 
-        {/* <div className="xl:my-10 md:my-8 sm:my-6 my-2">
-                    <h1 className={`text-[${colors.primary}] xl:text-[2rem] md:text-3xl sm:text-2xl text-xl font-medium flex items-center gap-4`}  style={{color : colors.primary }}>
-                    Conclusion <FaArrowRightLong />
-                    </h1>
-                    <p className={`md:text-xl sm:text-lg text-base  font-normal text-[${colors.secondary}] my-6`}>{conclusion}</p>
-                </div> */}
       </div>
     </div>
   );
 };
 
 export default Page;
-
-// // PageComponent.tsx
-// import React from 'react';
-// import Banner from '../../../our-portfolio/_components/banner';
-// import { cn } from '@/lib/utils';
-// import { poppins } from '@/app/fonts';
-// import { FaArrowRightLong } from "react-icons/fa6";
-// import WebsiteScroll from '../../../our-portfolio/_components/website-scroll';
-// import Image from 'next/image';
-// import WorkDetailSlider from '../../_components/work-detail-slider';
-// import { services, projectDetail ,bannerData, images, workDetail } from '@/dummy-data/page';
-
-// export default function Page({params} : {params:{id:any}}) {
-//     console.log(params.id,"===")
-//     return (
-//         <div className={cn('h-full w-full min-h-screen', poppins.className)}>
-//             <Banner img={bannerData.img} name={bannerData.name} />
-//             <div className='max-w-6xl mx-auto h-full w-full xl:my-10 md:my-8 sm:my-6 my-2'>
-//                 <div className=''>
-//                     <div className='grid grid-cols-2 items-start gap-8'>
-//                         <div className='grid grid-cols-2 items-start justify-start gap-4 my-4'>
-//                             {services.map((service, index) => (
-//                                 <span key={index} className='text-2xl font-medium flex justify-center items-center p-2 text-[#00AB55] border border-[#00AB55] px-5 rounded-full hover:bg-[#00AB55] hover:text-white transition-transform'>
-//                                     {service.name}
-//                                 </span>
-//                             ))}
-//                         </div>
-//                         <div>
-//                             <h1 className='text-[2rem] font-medium text-[#282D46]'>{projectDetail.title}</h1>
-//                             <p className='text-xl font-normal text-[#625D60] my-6'>{projectDetail.description}</p>
-//                         </div>
-//                     </div>
-//                 </div>
-//                 <div>
-//                     <h1 className='text-[#00AB55] text-[2rem] font-medium flex items-center gap-4'>Visit Live Site <FaArrowRightLong /></h1>
-//                     <div className='h-[0.5px] w-full bg-[#00AB55] my-4' />
-//                     <div className='flex items-center gap-4'>
-//                         <span className='text-[#625D60] text-2xl font-normal w-36'>Language  -</span>
-//                         <p className='text-[#282D46] text-2xl font-medium'>{projectDetail.language}</p>
-//                     </div>
-//                     <div className='h-[1px] w-full bg-[#00AB55] my-4' />
-//                     <div className='flex items-center gap-4'>
-//                         <span className='text-[#625D60] text-2xl font-normal w-36'>Timescale  -</span>
-//                         <p className='text-[#282D46] text-2xl font-medium'>{projectDetail.timescale}</p>
-//                     </div>
-//                     <div className='h-[1px] w-full bg-[#00AB55] my-4' />
-//                     <div className='flex items-center gap-4'>
-//                         <span className='text-[#625D60] text-2xl font-normal w-36 flex justify-between'>System <span>-</span></span>
-//                         <p className='text-[#282D46] text-2xl font-medium'>{projectDetail.system}</p>
-//                     </div>
-//                     <div className='h-[1px] w-full bg-[#00AB55] my-4' />
-//                 </div>
-//                 <div className='grid grid-cols-12 gap-8'>
-//                     <div className='w-full col-span-8 rounded-2xl overflow-hidden'>
-//                         <div className='h-[40vw] w-full relative'>
-//                             <Image src={images[0].src} alt={images[0].alt} fill className='object-cover h-full w-full' />
-//                             <Image src={images[1].src} alt={images[1].alt} fill className='w-full h-full' />
-//                         </div>
-//                     </div>
-//                     <div className='col-span-4 overflow-hidden h-full w-full'>
-//                         <div className='h-[40vw] w-full relative'>
-//                             <Image src={images[2].src} alt={images[2].alt} fill className='object-cover h-full w-full' />
-//                             <Image src={images[3].src} alt={images[3].alt} fill className='object-cover w-full h-full' />
-//                         </div>
-//                     </div>
-//                 </div>
-//                 <div className='my-8'>
-//                     <h1 className='text-[#00AB55] text-[2rem] font-medium flex items-center gap-4'>Context <FaArrowRightLong /></h1>
-//                     <p className='text-[2.5rem] font-normal text-[#282D46] my-2'>{workDetail.context}</p>
-//                     <p className='text-xl font-normal text-[#625D60] my-6'>{workDetail.description}</p>
-//                 </div>
-//                 <div className='h-[35vw]'>
-//                     <WorkDetailSlider />
-//                 </div>
-//                 <div className='my-8'>
-//                     <h1 className='text-[#00AB55] text-[2rem] font-medium flex items-center gap-4'>Goals <FaArrowRightLong /></h1>
-//                     <p className='text-[2.5rem] font-normal text-[#282D46] my-2'>{workDetail.goals}</p>
-//                     <p className='text-xl font-normal text-[#625D60] my-6'>{workDetail.description}</p>
-//                 </div>
-//                 <div className='grid grid-cols-2 gap-8'>
-//                     <div>
-//                         <h1 className='text-[#00AB55] text-[2rem] font-medium flex items-center gap-4'>Business Challenges <FaArrowRightLong /></h1>
-//                         <ul className='my-6 list-disc ml-5'>
-//                             {workDetail.businessChallenges.map((challenge, index) => (
-//                                 <li key={index} className='text-[1.5rem] text-[#625D60]'>{challenge}</li>
-//                             ))}
-//                         </ul>
-//                     </div>
-//                     <div className='h-auto w-full relative'>
-//                         <Image src={'/assets/portfolio-images/10.png'} alt='No Preview' fill className='object-cover rounded-2xl' />
-//                     </div>
-//                 </div>
-//                 <div className='xl:my-10 md:my-8 sm:my-6 my-2'>
-//                     <h1 className='text-[#00AB55] text-[2rem] font-medium flex items-center gap-4 my-2'>Customer relationship management (CRM) <FaArrowRightLong /></h1>
-//                     <div className='h-[40vw] w-full relative my-6'>
-//                         <Image src={'/assets/portfolio-images/10.png'} alt='No Preview' fill className='object-contain' />
-//                     </div>
-//                     <p className='text-[2.5rem] font-normal text-[#282D46] my-2'>{workDetail.crm}</p>
-//                     <p className='text-xl font-normal text-[#625D60] my-6'>{workDetail.description}</p>
-//                 </div>
-//                 <div className="xl:my-10 md:my-8 sm:my-6 my-2">
-//                     <h1 className='text-[#00AB55] text-[2rem] font-medium flex items-center gap-4'>Our Social Media Work <FaArrowRightLong /></h1>
-//                     <div className='h-[40vw] w-full relative my-6'>
-//                         <Image src={'/assets/portfolio-images/11.png'} alt='No Preview' fill className='object-contain' />
-//                     </div>
-//                     <p className='text-xl font-normal text-[#625D60] my-6'>{workDetail.socialMediaWork}</p>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
