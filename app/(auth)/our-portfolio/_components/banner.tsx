@@ -14,7 +14,7 @@ export default function Banner({name, img , data}:bannerProps) {
       <Image src={img} alt='No Preview' fill className='object-cover' />
       <p className='xl:text-8xl lg:text-6xl md:text-4xl sm:text-3xl text-2xl  font-medium text-white z-10'>
         {name}
-        <span className='text-5xl block font-bold text-center mt-1'>- {data}-</span>
+        <span className='xl:text-5xl md:text-3xl sm:text-xl text-sm block font-bold text-center mt-1'>- {data}-</span>
       </p>
     </div>
   )
